@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포함관계를 사용하여 선택하기</title>
+</head>
+<body>
+    <h1 id="title">포함관계를 사용하여 선택하기</h1>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let title = document.querySelector("#title") //자바스크립트에서 id 선택하는 것은 # / let을 넣는 것을 저장을 한다는것. 
+        let body = title.parentElement //title의 부모태그인 body태그가 선택됨
+        body.style.backgroundColor="ivory"
+
+        // document.querySelector("#title").parentElement.style.backgroundColor="green" // let을 넣어 저장하지 않아도 구현가능 // 체이닝기법
+        
+        let list_ul = document.querySelector(".list")
+        let li_array = list_ul.children // 배열상태로 리턴을 하기 때문에 []인덱스박스를 순번과 같이 입력하여 자식태그를 선택
+        li_array[2].style.backgroundColor="red" //children이 4명이고, array에서 한명을 특정하기위해 0번째를 입력함. 
+        // li_array[0].style.fontSize="2rem"
+        // li_array[1].style.fontSize="2rem"
+        // li_array[2].style.fontSize="2rem"
+        // li_array[3].style.fontSize="2rem"
+
+        for(let i=0; i<li_array.length; i++){ //추가된 것들도 속성에 적용이 되어야하기 때문에 늘어난 숫자를 포함한 총갯수와 설정값이 동일해야함. 그래서 length를 넣어 같이 늘어나게 해주면 됨. 
+            li_array[i].style.fontSize = "2rem" //인덱스박스 안에는 숫자가 들어가기만 하면 됨.
+        }
+    </script>
+    <h2>선택한 태그의 다음형제와 이전형제를 선택할 수 있다.</h2>
+    <ul>
+        <li>list1</li>
+        <li class="me">list2</li>
+        <li>list3</li>
+    </ul>
+    <script>
+        let me = document.querySelector(".me")
+        me.previousElementSibling.style.border = "0.5rem solid orange" //me클래스의 이전형제 지정
+        me.nextElementSibling.style.border =  "0.5rem solid yellow"  //me클래스의 다음형제 지정
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEAM join</title>
+</head>
+<body>
+    <section class="create_account">
+        <form action="#">
+            <h2>CREATE YOUR ACCOUNT</h2>
+            <div>
+                <label for="userEmail">Email Address</label>
+                <br>
+                <input type="text" id="userEmail">
+            </div>
+            <div>
+                <label for="userEmail_confirm">Confirm your Address</label>
+                <br>
+                <input type="text" id="userEmail_confirm">
+            </div>
+            <div>
+                <label for="residence">Country of Residence</label><br>
+                <select name="residence">
+                    <option value="Region not selected">Select a region</option>
+                    <option value="America, Unitied States of">America, Unitied States of</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Korea, Republic of" selected>Korea, Republic of</option>
+                    <option value="Vietnam">Vietnam</option>  
+                </select>
+            </div>
+            <!-- //// 구글 리캡차 연동 필요 //// -->
+            <div class="recaptcha"></div>
+            <!-- //////////////////////////// -->
+            <div>
+                <input type="checkbox" id="policy_agree">
+                <label for="policy_agree">I am 13 years of age or older and agree to the terms of the <a href="#" target="_blank">Steam Subscriber Agreement</a> and the <a href="#" target="_blank">Valve Privacy Policy.</a>
+            </label>
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+    </section>
+</body>
+</html>

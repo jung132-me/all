@@ -1,0 +1,69 @@
+*{margin: 0; padding: 0;}
+.hero{
+    height: 100vh;
+    position: relative;
+}
+.hero video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 가로와 세로 값을 쓰지 않고 오브젝트 핏을 쓰면 정상 작동 되지 않음. 필시 쓸 것! */
+}
+.floatingTxt{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerTxt{
+    border: 1px solid lime;
+    width: 60%;
+    text-align: center;
+    /* 중앙에 배치하는 2번째 방법 */
+    /* display: flex;    
+    flex-direction: column; */
+    /* p태그도 넣으면 flex속성 때문에 일렬로 만들어지기 때문에 디렉션을 변경해 줌 */
+    /* justify-content: center;
+    align-items: center;
+    height: 100%; */
+}
+.innerTxt h2{
+    display: flex;
+    justify-content: center;
+}
+.innerTxt h2 b{
+    opacity: 0;
+    /* display: inline-block; */
+    font-size: 5rem;
+    /* animation: fadein 5s ease 0s; */
+    
+}
+.innerTxt h2 b:nth-of-type(1){animation: fadein 5s ease 0s forwards;}
+.innerTxt h2 b:nth-of-type(2){animation: fadein 5s ease 0.1s forwards;}
+.innerTxt h2 b:nth-of-type(3){animation: fadein 5s ease 0.2s forwards;}
+.innerTxt h2 b:nth-of-type(4){animation: fadein 5s ease 0.3s forwards;}
+.innerTxt h2 b:nth-of-type(5){animation: fadein 5s ease 0.4s forwards;}
+.innerTxt h2 b:nth-of-type(6){animation: fadein 5s ease 0.5s forwards;}
+.innerTxt h2 b:nth-of-type(7){animation: fadein 5s ease 0.6s forwards;}
+.innerTxt h2 b:nth-of-type(8){animation: fadein 5s ease 0.7s forwards;}
+.innerTxt h2 b:nth-of-type(9){animation: fadein 5s ease 0.8s forwards;}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: translateY(20px) scale(10) rotate(360deg); 
+    }
+    21%{
+        transform: translateY(20px) scale(1) rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

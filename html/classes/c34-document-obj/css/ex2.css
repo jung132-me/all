@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.popup{
+    position: fixed;
+    left: 100px;
+    top: 50px;
+    width: 300px;
+    padding: 10px;
+    background-color: wheat;
+    border: 1px solid saddlebrown;
+    display: none;
+    z-index: 1500;
+}
+.popup.on{display: block;}
+/* 위에 none을 해제하는 기능 */
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    display: none;
+    z-index: 1000;
+}
+.modal.on{
+    display: block;
+}
+.popup_control{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn_close{
+    padding: 5px;
+    background-color: saddlebrown;
+    color: #fff;
+    cursor: pointer;
+}

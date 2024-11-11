@@ -1,0 +1,31 @@
+@font-face{
+    font-family: "등록한폰트1";
+    /* 등록명은 순수영어일경우 쌍따옴표 없이 등록가능하고, 한글이 있거나 띄어쓰기가 있는 경우에는 앞뒤로 쌍따옴표를 써서 등록명을 포기한다. */
+    src:url("../font/ChangwonDangamAsac-Bold_0712.ttf")
+}
+.dangam{
+    font-family: "등록한폰트1"; 
+}
+
+@font-face{
+    font-family: "촵체";
+    src:url("../font/chab.ttf")
+}
+@font-face{
+    font-family: "딱체";
+    src:url("../font/ddag.ttf")
+}
+.chap{font-family: "촵체";}
+.ddag{
+    font-family: "딱체";
+}
+.ptag{
+    font-family: "딱체","등록한폰트1", "찹체",sans-serif;
+    /* sans-serif -> 획이 없는 고딕체 계열로 적용한다.
+    serif -> 획이 있는 명조체 계열로 적용한다. */
+    font-size: 50px;
+
+}
+.f20{font-size: 20px;}
+.f30{font-size: 30px;}
+.f20.f30{font-size: 50px;}

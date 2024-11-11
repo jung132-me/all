@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.popup{
+    position: fixed;
+    left: 100px;
+    top: 50px;
+    width: 300px;
+    padding: 10px;
+    background-color: wheat;
+    border: 1px solid saddlebrown;
+    opacity: 0;
+    pointer-events: none;
+    /* 마우스 클릭에 걸리지 않게 함 */
+    /* display: none;  opacity를 주려면 none 설정을 지워야함(둘중선택)*/ 
+    z-index: 1500;
+    transition: all 0.7s ease 0s; 
+    /*  중간 정도가 있어야 transtion이 실행이 가능함 */
+}
+.popup.on{
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 위에 none을 해제하는 기능 */
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+    /* display: none; */
+    z-index: 1000;
+    transition: all 0.7s ease 0s;
+}
+.modal.on{
+    display: block;
+    opacity: 0.7;
+    pointer-events: auto;
+}
+.popup_control{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn_close{
+    padding: 5px;
+    background-color: saddlebrown;
+    color: #fff;
+    cursor: pointer;
+}

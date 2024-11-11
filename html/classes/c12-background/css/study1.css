@@ -1,0 +1,71 @@
+*{margin: 0;padding: 0;}
+.pre{
+    white-space: pre;
+}
+.prewrap{
+    white-space: pre-wrap;
+}
+.desc{
+    padding-bottom: 50px;
+    border-bottom: 5px solid #000;
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+}
+.box{
+    color: #ffffff;
+    background-color: blue;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+}
+.box2{
+    margin: 100px 0;
+    height: calc(100vh - 120px);
+    background-color: bisque;
+    background-image: url(../img/dog-8337394_640.jpg);
+    background-repeat: no-repeat;
+    /* background-position: 100% 100%; */
+    /* background-position: center; */
+    background-position: calc(100% - 60px) calc(100% - 70px);
+}
+.box3{
+    color: #ffffff;
+    height: 100vh;
+    background-color: aquamarine;
+    background-image: url(../img/dog-8337394_640.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px auto; 
+    background-size: auto 300px;
+    background-size: 100% auto;
+    background-position: auto 100%;
+    background-size: cover;
+    /* 태그의 공간을 가득 채우는 방식 -  배경이미지가 잘려서 안보일 수도 있음 => cover */
+    background-size: contain;
+    /* 이미지가 태그의 공간 안에 잘리지 않는 선에서 최대 크기로 들어가서 채우는 방식 => contain */
+    background-position: 50% 50%;
+    background: aquamarine url(../img/dog-8337394_640.jpg) no-repeat 0 0 /cover;
+    background-color: red;
+}
+.box4{
+    border: 1px solid #fff ;
+    width: 50vw;
+    height: 50vw; 
+    margin: 0 auto;
+    margin-bottom: 50px;
+    /* 너비의 절반 만큼이라는 뜻(상대단위)일뿐, 너비는 반드시 vw, 높이는 vh라고 써야하는 건 아님. height에도 vw단위를 써도 무관 */
+    background: aquamarine url(../img/dog-8337394_640.jpg) no-repeat 50% 50% /cover;
+    background-attachment: fixed;
+}
+.box4.blend{
+    background-blend-mode: multiply;
+}
+.blur{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    -webkit-backdrop-filter: blur(10px);
+    /* -webkit- 이라는 접두어를 사용하여 비표준css속성을 임시로 사용할 수 있다. */
+    backdrop-filter: blur(10px);
+}

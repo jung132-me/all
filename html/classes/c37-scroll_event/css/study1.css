@@ -1,0 +1,25 @@
+*{margin: 0;padding: 0;}
+.wrap{
+    height: 5000px; 
+    background-color: lightblue;
+}
+.btn_top{
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px; height: 100px;
+    background-color: slateblue; 
+    cursor: pointer;
+    /* display: none; */
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    opacity: 0;
+    pointer-events: none;
+    /* 마우스 클릭이나 호버에 반응하지 않도록 함 */
+    transform: scale(0); /*해당하는 버튼이 보이지 않게 함*/
+}
+.btn_top.on{
+    display: block;
+    opacity: 1;
+    pointer-events: auto; /*cursor pointer 원상복귀*/
+    transform: scale(1); /*해당하는 버튼이 작은 사이즈에서 점점 커지는 효과구현*/
+}

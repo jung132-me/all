@@ -1,0 +1,49 @@
+ul{list-style: none;}
+*{margin: 0; padding: 0;}
+.station{
+    font-weight: bold;
+    overflow: hidden;
+    border: 10px solid lime;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    transform: rotate(30deg)scale(1.5);
+    z-index: -1;
+    opacity: 0.3;
+}
+.train{
+    width: 200%;
+    display: flex;
+}
+.train>li{
+    border: 1px solid salmon;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.a{
+    font-size: calc(100vw / 16.5);
+    /* 이어지는 문장 사이가 너무 간격이 길경우 100vw에서 나누는 값을 조정한다. */
+    animation: moveA 20s linear -15s infinite;
+}
+.b{
+    font-size: calc(100vw / 16.5);
+    animation: moveB 20s linear -5s infinite;
+}
+@keyframes moveA {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes moveB {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}

@@ -1,0 +1,39 @@
+:root{
+    /* 변수를 만드는 곳 */
+    --maincolor:violet;
+    /* maincolor바꾸고 싶을 때 위에 것만 바꾸면 됨. 약간 rem이런거와 비슷한 느낌 */
+}
+
+.box{
+    border: 10px solid var(--maincolor);
+    width: 400px;
+    height: 400px;
+    /* transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: linear;
+    transition-delay: 0s; */
+    transition: all 0.4s linear 0s;
+}
+.box:hover{
+    width: 300px;
+    height: 300px;
+    background-color: lavender;
+}
+.box2{
+    border: 10px solid var(--maincolor);
+    width: 400px;
+    height: 400px;
+    /* transition-property: width,height,background-color;
+    transition-duration: 0.4s, 0.4s, 0.4s;
+    transition-timing-function: linear,ease;
+    transition-delay: 0s, 0.4s, 0.8s; */
+    transition: 
+    width 0.4s linear 0s,
+    height 0.4s ease 0.4s,
+    background-color 0.4s, linear 0.8s ;
+}
+.box2:hover{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}

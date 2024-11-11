@@ -1,0 +1,37 @@
+h1:hover{
+    background: blue;
+    color: #fff;
+}
+h1:active{
+    letter-spacing: 20px;
+    text-decoration: underline;
+    background-color: rgb(43, 226, 43);
+}
+p{
+    border: 1px solid #000;
+    display: flex;
+    /* flex로 설정하면 p태그의 너비 지정이 가능해짐 */
+    /* justify-content: space-between; */
+    align-items: center;
+    /* p태그의 자식은 3명(before,내용,after) */
+}
+p:before{
+    /* before태그를 넣는 것은 p태그 자식의 이전형제가 됨을 의미 */
+    /* 가상태그는 css에서 만들어진 경우이기 때문에 html 상에서 드래그해 선택이 되지 않음 */
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../img/quote1.png") no-repeat 50% 50% /cover;
+    /* width: 500px;
+    너비가 html에 구현이 되지 않기 때문에 before태그 속성은 인라인태그임 */
+    /* display: block;
+    그러나 위와 같은 설정을 부여하여 블록 설정으로 변환가능 */
+}
+p:after{
+    content: "";
+    /* content 속성이 없으면 아예 만들어지지 않음 */
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+    background: url("../img/quote2.png") no-repeat 50% 50% /cover;
+}

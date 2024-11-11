@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포함관계를 이용한 선택자 구성</title>
+    <link rel="stylesheet" href="./css/study3.css">
+</head>
+<body>
+    <h1>자식선택자</h1>
+    <p>태그의 포함관계를 이용해서 선택자 부분을 구성할 수 있다.</p>
+    <p>선택자부분에서 >(꺽새)를 사용하면 (~안에 포함되어 잇는 자식 중에서)라고 해석</p>
+
+    <h1>자손선택자</h1>
+    <p>선택자부분에서 띄어쓰기를 하면 (~안에 포함되어 잇는 자손 중에서)라고 해석</p>
+
+    <h2>형제선택자</h2>
+    <p>선택자부분에서 ~,+을 사용하여 다음형ㅇ제를 선택할 수 있다(이전형제는 선택불가능)</p>
+    <p>+선택자는 앞에서 선택한 태그의 다음형제태그 한개만 선택</p>
+    <p>~선택자는 앞에서 선택한 태그의 다음형제태그 여러개 선택</p>
+
+    <h2>순번선택자</h2>
+    <p>태그가 갖고 있는 순서를 사용하여 태그를 선택할 수 있다.</p>
+    <p>태그명:nth-of-type(숫자) 괄호안에는 숫자나 수식을 입력해서 원하는 순번의 태그를 선택할 수 있다.</p>
+
+    <h2>속성선택자</h2>
+    <p>태그가 가지고 있는 속성과 속성값을 사용하여 태그를 선택할 수 있다.</p>
+    <p>태그명[속성명="속성값"]</p>
+    <p>모든 태그는 data-원하는 속성명 이름 방법을 사용하여 커스텀 속성을 정의할 수 있다.</p>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta natus asperiores nesciunt temporibus ipsa dignissimos alias. Commodi architecto voluptatum doloremque ad, quasi provident quidem voluptatem nemo alias, reiciendis exercitationem harum?</p>
+    <div class="box">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta natus asperiores nesciunt temporibus ipsa dignissimos alias. Commodi architecto voluptatum doloremque ad, quasi provident quidem voluptatem nemo alias, reiciendis exercitationem harum?</p>
+        <ul>
+            <li class="list1">
+                <p>ptag-1</p>
+            </li>
+            <li class="box">
+                <p>ptag-2</p>
+            </li>
+            <li>
+                <p>ptag-3</p>
+            </li>
+            <li>
+                <p>ptag-4</p>
+            </li>
+            <li>
+                <p>ptag-5</p>
+            </li>
+            <li>
+                <p>ptag-6</p>
+            </li>
+        </ul>
+    </div>
+    <div class="box2">
+        <h3>title1</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ut voluptate ea at rerum commodi. At necessitatibus, quia cupiditate aliquam quae beatae velit tempore veritatis perferendis unde, dignissimos minus numquam!</p>
+        <h3>title2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ut voluptate ea at rerum commodi. At necessitatibus, quia cupiditate aliquam quae beatae velit tempore veritatis perferendis unde, dignissimos minus numquam!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ducimus veritatis cupiditate quae fugit, impedit neque cum illo iure quibusdam est beatae tempora nostrum accusantium aut fugiat delectus. Dolores, illum.</p>
+        <h3>title3</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ut voluptate ea at rerum commodi. At necessitatibus, quia cupiditate aliquam quae beatae velit tempore veritatis perferendis unde, dignissimos minus numquam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, deserunt. Cum temporibus mollitia magnam repellendus fugit! Sequi ratione, accusamus asperiores assumenda atque, quae excepturi molestias quis voluptate, quaerat fugit omnis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto iste adipisci quibusdam optio. Neque, ad! Quibusdam nobis veniam molestiae iusto tempora ullam nulla, eligendi reiciendis nam quod dolorem odio error.</p>
+    </div>
+    <ul class="list_box">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+    </ul>
+    <a href="#">현재탭에서 열기</a>
+    <a href="#" target="_blank">새탭에서 열기</a>
+    <a href="http://www.naver.com">네이버로 바로가기</a>
+    <p data-jm="정민설명">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti libero illo quia aliquam vitae ducimus autem doloribus, ex totam minima culpa. Reiciendis, repellendus voluptas? Error nulla et animi ea vitae.</p>
+</body>
+</html>

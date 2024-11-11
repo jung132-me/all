@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응용</title>
+    <link rel="stylesheet" href="./css/ex1.css">
+</head>
+<body>
+    <header class="">
+        header
+    </header>
+    <nav><button id="btnClose">Close</button></nav>
+    <button id="btnMenu">메뉴열기</button>
+    <script>
+        document.querySelector("#btnMenu").addEventListener("click",function(){
+            document.querySelector("nav").classList.add("on")
+        })
+        document.querySelector("#btnClose").addEventListener("click",function(){
+            document.querySelector("nav").classList.remove("on")
+        })
+    </script>
+</body>
+</html>

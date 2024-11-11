@@ -1,0 +1,77 @@
+header{
+    /* border-bottom: 5px solid var(--main-color); */
+    height: 5rem;
+    /* height: 24rem; */
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease 0s;
+    overflow: hidden;
+}
+header:hover{
+    height: 24rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.527);
+}
+header:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    left: 0;
+    top: 4.8rem;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+/* header:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100%-5rem);
+    left: 0;
+    top: 5rem;
+    background-color: #fff;
+    z-index: -1;
+} */
+header .commonFrame{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.logo a{
+    display: block;
+}
+.logo a img{
+    height: 5rem;
+}
+.gnb{
+    display: flex;
+}
+.gnb>li{
+    margin-right: var(--space-medium);
+}
+.gnb>li:last-of-type{
+    margin-right: 0;
+    
+}
+.gnb>li>a{
+    display: flex;
+    height: 5rem;
+    align-items: center;
+}
+.gnb>li>a:hover{
+    text-decoration: underline;
+}
+.gnb>li>ul{
+    margin-top: var(--space-small);
+}
+.gnb>li>ul>li>a{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+}
+.gnb>li>ul>li>a:hover{
+    color: var(--main-color);
+    
+}

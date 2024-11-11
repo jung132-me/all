@@ -1,0 +1,232 @@
+@media (min-width:1001px) and (max-width:1440px){
+/* 태블릿 스타일 */
+    .innerContent{
+        width: 96%;
+        margin: 0 auto;
+    }
+    html{
+        font-size: var(--font-size-tab);
+    }
+    .hero .heroDesc h4{
+        font-size: 2.5rem;
+    }
+    /* .mo{
+        display: none;
+    } */
+    .pro2 .w100{
+        width: 100%;
+    }
+    .pro2 .w100+dd{
+        width: 100%;
+    }
+    .con2 section{
+        width: calc(50% - 1rem);
+
+    }
+    .pro3{
+        margin-top: 2rem;
+    }
+    .eduList>li{
+        width: calc((100% - (2 - 1)*1rem)/2);
+        box-sizing: border-box;
+        margin-right: 1rem;
+        padding: 1rem 0;
+    }
+    .eduList>li:nth-of-type(3n){
+        margin-right: 1rem;
+    }
+    .eduList>li:nth-of-type(2n){
+        margin-right: 0;
+    }
+    .train>li .innerContent>section:nth-of-type(1){
+        margin-right: 1rem;
+        
+    }
+
+}    
+@media (max-width:1000px){
+/* 모바일 스타일 */
+    .pagination{
+    top: calc(400px - 2rem);
+        
+    }
+    .train>li figure{
+        height: 400px;
+    }
+    .train>li .innerContent>section:nth-of-type(1){
+        margin-right: 1rem;
+        
+    }
+    .innerContent{
+        width: 96%;
+        margin: 0 auto;
+    }
+    html{
+        font-size: var(--font-size-mobile);
+    }
+    header.pc{
+        display: none;
+    }
+    .btnMoGnb{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .mo{
+        display: block;
+    }
+    header.mo .innerContent{
+        justify-content: flex-end;
+    }
+    nav.mo{
+        transition: all 0.6s ease 0s;
+        transform: translateX(100%);
+        background-color: #000;
+        position: fixed;
+        /* 보통은 부모태그의 영향을 받지만 fixed는 공중에 떠있기 때문에 너비와 높이를 정하는 기준이 화면이 됨 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+        padding: 1.57rem 0;
+        box-sizing: border-box;
+    }
+    nav.mo.on{
+        transform: translateX(0%);
+    }
+    /* nav.mo .innerContent{
+    
+    } */
+    .moTop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .btnClose{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    nav.mo .btnCommon{
+        background-color: var(--main-color);
+        color: #fff;
+    }
+    .moTop .btnCommon:hover{
+       color: #000;       
+    }
+    .moTop .btnCommon:active{
+        background-color: #000;
+        color: #fff;
+        border: 1px solid var(--main-color);
+    }
+    .moGnb{
+        color: #fff;
+        height: calc(100vh - 10.28rem);
+        overflow: auto;
+    }
+    .moGnb h4{
+        font-size: 2.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .moGnb p{
+        font-size: 0.85rem;
+    }
+    .moGnb>li{
+        margin-bottom: 2.4rem;
+    }
+    .hero .heroDesc h4{
+        font-size: 2rem;
+    }
+    .con2 .innerContent{
+        display: block;
+        /* 2번째 방법 (위에서 아래로 배치되게 함) 
+        display: flex;
+        flex-direction: column; */
+    }
+    .con2 section{
+        width: auto;
+        padding: 2rem;
+    }
+    .pro2 .w100{
+        width: 100%;
+    }
+    .pro3{margin-top: 0;}
+    .eduList{
+        display: block;
+    }
+    .eduList>li{
+        width: auto;
+        box-sizing: border-box;
+        margin: 0;
+        /* 기존에 설정되어 있었던 마진 설정 리셋 */
+    }
+    .eduList>li:last-of-type{
+        margin-bottom: 0;
+    }
+    .popupList li{
+        width: calc((100% - (2 - 1)*1rem)/2);
+        box-sizing: border-box;
+        margin-right: 1rem;
+        padding: 1rem 0;
+    }
+    .popupList>li:nth-of-type(3n){
+        margin-right: 1rem;
+    }
+    .popupList>li:nth-of-type(2n){
+        margin-right: 0;
+    }
+}
+@media (max-width:768px){
+    .pagination{
+       top:1rem
+    }
+    .train>li figure{
+        height: auto;
+    }
+    .btnDown{display: none;}
+    .con5 .innerContent br{
+        display: none; 
+    }
+    .train>li .innerContent{
+        flex-direction: column;
+    }
+    
+}
+@media (max-width:500px){
+    .popupList li{
+        display: block;
+    }
+    .popupList>li{
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .popupList>li:last-of-type{
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width:300px){
+    html{
+        word-break: break-all;
+    }
+    h4{
+        font-size: 2.5rem;
+        word-break: keep-all;
+    }
+    .pro2 dl>dt{
+        width: 50%;
+    }
+    .pro2 dl>dd{
+        width: 50%;
+    }
+    .certList>li>i{
+        width: 50%;
+    }
+    .certList>li>span{
+        width: 50%;
+    }
+    
+}

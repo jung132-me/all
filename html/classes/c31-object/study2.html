@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 메서드</title>
+</head>
+<body>
+    <h1>객체의 메서드</h1>
+    <p>객체는 자바스크립트의 사물을 표현하는 데이터형태로, 동작을 나타내는 부분은 프로퍼티중에서도 특별히 메서드라고 부른다. </p>
+    <script>
+        let printer = {
+            widthSize: 120, 
+            heightSize: 20,
+            bodyColor: "black",
+            print:function(){
+                alert("프린트를 시작합니다.")
+            }
+        }
+        printer.widthSize
+        printer.print()
+    </script>
+</body>
+</html>

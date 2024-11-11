@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 우선순위 점수</title>
+    <style>
+        p{
+            color: black!important; 
+            /* 속성값 뒤에 !important 삽입시 반드시 해당값으로 적용하겠다는 뜻 */
+        }
+        .a{color: red; color: blue; color: green;}
+        .a{color: violet; background-color: aquamarine;}
+        .a{
+            color: red;
+        }
+        p{color: blue;}
+        p#aa.a.b{color: green;}
+        p#aa.a{
+            /* p태그이면서 아이디가 aa이고, 클래스가 a인 태그를 선택 */
+            color: red;
+        }
+        p.a#aa{
+            /* p태그이면서 클래스가 a이고, 아이디가 aa인 태그를 선택 */
+            color: blue;
+        }
+        p#aa{
+            /* p태그면서 아이디가 aa인 태그를 선택한다 */
+            color: red;
+        }
+        #aa{
+            /* 아이디가 aa인 태그를 선택 */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자 점수</h1>
+    <p>css는 선택자 부분의 표현이 특이점이 높을 수록 우선수위가 높게 적용된다.</p>
+    <p>우선순위가 높게 적용된다라는 것은 css스타일이 최종적으로 적용된다라는 뜻이다.</p>
+
+    <hr>
+
+    <h2>단계적으로 사용되는 css</h2>
+    <p class="a b" id="aa" style="color: blueviolet;">브라우저는 위에서 아래, 왼쪽에서 오른쪽으로 소스코드를 해석한다. 그렇기 때문에 나중에 적용한 스타일 속성이 최종적용되는 속성이 된다.</p>
+
+    <hr>
+
+    <h2>선택자의 우선순위 점수</h2>
+    <p>태그를 선택하는 선택자는 우선순위 점수가 높을수록 최종스타일로 적용된다(우선순위점수는 합산된다)</p>
+    <ul>
+        <li>태그명으로 선택 - 1점 자릿수 증가</li>
+        <li>클래스명으로 선택 - 10점 자릿수 증가</li>
+        <li>아이디명으로 선택하면 - 100점 자릿수 증가</li>
+        <li>인라인스타일 방식 - 1000점 자릿수 증가</li>
+        <li>!important - 무조건 적용</li>
+    </ul>
+
+
+</body>
+</html>

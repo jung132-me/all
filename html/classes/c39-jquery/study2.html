@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리로 속성/내용 제어하기</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/study2.js"></script>
+</head>
+<body>
+    <h1>attr 메서드</h1>
+    <p>attr함수를 통해서 태그의 속성값을 변경할 수 있다(매개변수2개) / 속성에 적용된 속성값을 불러올 수 있다(매개변수1개)</p>
+    <a href="https://www.naver.com/" class="naverlink">네이버로 바로가기</a>
+
+    <h1>html 메서드</h1>
+    <p>선택된 태그의 내용을 가져오거나 새로운 내용으로 바꿀 때 사용한다.</p>
+    <p class="a">나는 <b>html</b>내용이 바뀌게 된다. </p>
+
+    <h1>클래스 메서드</h1>
+    <p>선택된 태그의 클래스를 추가하거나 삭제할 수 있다.</p>
+    <p class="box">이 클래스는 box라는 클래스를 가지고 있다.</p>
+
+    <h1>포함관계를 이용하여 태그 선택</h1>
+    <ul class="lists">
+        <li>list1</li>
+        <li>list2</li>
+        <li class="b">list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+
+    <h1>클릭 이벤트리스너 등록</h1>
+    <div class="frame">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eum similique repellendus? Quos assumenda suscipit autem molestiae. Minima quas illo vitae itaque perferendis architecto possimus sint? Impedit laudantium fugit ut.</div>
+    <button class="btn">click!</button>
+
+    <h1>index()함수 eq()함수</h1>
+    <p>제이쿼리에서 사용되는 독특한 함수로 index()는 선택한 태그의 순번을 리턴하고, eq()함수는 괄호안에 순번을 적어 선택한 태그의 순번에 맞는 태그를 선택하는 함수이다. 사용방법을 보아야 이해가 쉽다. </p>
+
+    <ol class="tab_lists">
+        <li>tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+        <li>tab5</li>
+    </ol>
+</body>
+</html>

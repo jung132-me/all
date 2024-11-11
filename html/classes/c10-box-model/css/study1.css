@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+    /* border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: red; */
+    /* border-left: 1px solid red; */
+
+    /* border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: green; */
+    /* border-top: 1px solid red; */
+
+    /* border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: red; */
+    /* border-right: 1px solid red; */
+
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: red; */
+    /* border-bottom: 1px solid red; */
+
+    border: 1px solid red;
+    /* margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px; */
+
+    /* margin: 100px;  */
+    /* 사방에 똑같은 마진 100픽셀 */
+    /* margin: 50px 100px; */
+    /* 위아래50 좌우100 */
+    /* margin: 20px 100px 50px; */
+    /* 위20 아래100 좌우50 */
+    margin: 10px 20px 30px 40px;
+    /* 위10 오른20 아래30 왼40 시계방향*/
+}
+.box2{
+    border: 1px solid blue;
+    margin-top: 10px;
+    /* 태그가 인접한 경계의 마진은 둘 중 큰 값으로 적용되는 특징이 있다.(위아래마진만, 좌우마진은 둘다 적용된다) */
+    /* padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; */
+    padding: 20px;
+}
+.box2 p{
+    border: 1px solid red;
+}
+/* html{
+    border: 1px solid pink;
+}
+body{
+    border: 1px solid green;
+} */
+.line1{
+    border: 1px solid red;
+    padding: 10px ;
+    /* 인라인레벨태그는 박스형태의 컨텐츠박스가 아니고 라인형태이기 때문에 위아래 paddding/margin은 쓰지 않고, 좌우 padding/margin만 사용한다. */
+    margin: 10px;
+}
+#container{
+    border: 10px solid darkmagenta;
+    width: 300px;
+    padding: 20px;
+    box-sizing: content-box;
+    /* height: 100px; */
+}
+.box3{
+    border: 10px solid orange;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}

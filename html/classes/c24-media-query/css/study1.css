@@ -1,0 +1,16 @@
+.wrap{
+    background: aliceblue;
+}
+@media (min-width:1500px){
+    /* 화면최소너비가 1500px인 경우 -> 1500px보다 큰 경우 적용되는 스타일 */
+    .wrap{
+        background: skyblue;
+        display: flex;
+    }
+}
+@media (min-width:1400px) and (max-width:1499px){
+    /* 화면최소너비가 1400px이고, 최대 너비가 1499px인 경우 -> 1400px보다 크고 1499px보다 작은 경우 적용되는 스타일 */ 
+    .wrap{
+        background: slateblue;
+    }
+}

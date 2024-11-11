@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 체질량지수(BMI)</title>
+    <link rel="stylesheet" href="./css/ex2.css">
+</head>
+<body>
+    <!-- <div class="bmi">
+        <h2>나의 체질량 지수(BMI)</h2>
+        <p>체질량지수는 자신의 몸무게(kg)를 키의 제곱(m)으로 나눈 값입니다.<br>
+            체질량지수는 근육량, 유전적 원인, 다른 개인적 차이를 반영하지 못하는 단점이 있음에도 불구하고
+            조사자들이나 의료인들이 가장 많이 쓰는 방법 중 하나입니다.</p>
+    
+        <div>
+            <dl>
+                <dt>비만도 결과</dt>
+                <dd>정상입니다.</dd>
+                <dt>BMI 지수</dt>
+                <dd>22.83</dd>
+            </dl>
+        </div>
+        <div class="bmiBar">
+        BMI
+        <ul class="bmiBarList">
+            <li>저체중<span>18.5</span></li>
+            <li>정상<span>23</span></li>
+            <li>과체중<span>25.00</span></li>
+            <li>비만</li>
+        </ul>
+        체중
+        </div>
+    </div> -->
+    <script>
+        let height = Number(prompt("키를 입력해주세요."))/100
+        let weight = Number(prompt("몸무게를 입력해주세요."))
+        let bmi = (weight / Math.pow(height,2)).toFixed(2)
+
+        let result = bmi>=25?"비만":bmi>=23?"과체중":bmi>=18.5?"정상":"저체중"
+    
+        document.write(`<div class="bmi">
+        <h2>나의 체질량 지수(BMI)</h2>
+        <p>체질량지수는 자신의 몸무게(kg)를 키의 제곱(m)으로 나눈 값입니다.<br>
+            체질량지수는 근육량, 유전적 원인, 다른 개인적 차이를 반영하지 못하는 단점이 있음에도 불구하고
+            조사자들이나 의료인들이 가장 많이 쓰는 방법 중 하나입니다.</p>
+    
+        <div>
+            <dl>
+                <dt>비만도 결과</dt>
+                <dd>${result}</dd>
+                <dt>BMI 지수</dt>
+                <dd>${bmi}</dd>
+            </dl>
+        </div>
+        <div class="bmiBar">
+        BMI
+        <ul class="bmiBarList">
+            <li>저체중<span>18.5</span></li>
+            <li>정상<span>23</span></li>
+            <li>과체중<span>25.00</span></li>
+            <li>비만</li>
+        </ul>
+        체중
+        </div>
+    </div>`)
+    </script>
+</body>
+</html>

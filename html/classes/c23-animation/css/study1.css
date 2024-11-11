@@ -1,0 +1,33 @@
+@keyframes my_rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(140deg);
+    }
+}
+.box{
+    border: 5px solid saddlebrown;
+    width: 300px;
+    height: 300px;
+}
+.ani1{
+    animation-name: my_rotate;
+    animation-duration: 4s;
+    animation-timing-function: linear ;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    /* 회전 수 */
+    animation-direction: normal;
+    /* 애니메이션 돌아가는 방향 설정 
+    alternate 양방향으로 회전*/
+    animation-fill-mode: forwards;
+    /* 기본값 : none 
+    backword: 0% 기점에 맞춘 스타일로 끝냄
+    forward: 100% 기점에 맞춘 스타일로 끝냄*/
+    /* 축약형 
+    animation: my_rotate 4s linear 0s infinite normal forwards; */
+}
+.ani1:hover{
+    animation-play-state: paused;
+}

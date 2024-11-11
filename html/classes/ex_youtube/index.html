@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 예제 메인페이지</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap"></div>
+        <header>
+            <div class="header_1">
+            <a href="#" class="btn_menu"><img src="./img_Youtube/btn_menu.svg" alt="메뉴버튼"></a>
+            <h1 class="logo">
+                <a href="#"><img src="./img_Youtube/logo_header.svg" alt="상단 유튜브 로고"></a>
+            </h1>
+            </div>
+            <div class="header_2">
+                <input type="text" class="search_field" placeholder="검색">
+                <button class="btn_confirm_search">
+                    <svg class="btn_search" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;" aria-hidden="true"><path clip-rule="evenodd" d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z" fill-rule="evenodd"></path></svg>
+                </button>
+                <a href="#" class="btn_search_voice">
+                    <img src="./img_Youtube/btn_mic.svg" alt="음성으로 검색">
+                </a>
+            </div>
+            <div class="header_3">
+                <a href="#" class="btn_setting">
+                    <img src="./img_Youtube/btn_set.svg" alt="설정하기">
+                </a>
+                <a href="#" class="btn_login">
+                    <svg class = "icn_login" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit;" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 1c4.96 0 9 4.04 9 9 0 1.42-.34 2.76-.93 3.96-1.53-1.72-3.98-2.89-7.38-3.03A3.996 3.996 0 0016 9c0-2.21-1.79-4-4-4S8 6.79 8 9c0 1.97 1.43 3.6 3.31 3.93-3.4.14-5.85 1.31-7.38 3.03C3.34 14.76 3 13.42 3 12c0-4.96 4.04-9 9-9zM9 9c0-1.65 1.35-3 3-3s3 1.35 3 3-1.35 3-3 3-3-1.35-3-3zm3 12c-3.16 0-5.94-1.64-7.55-4.12C6.01 14.93 8.61 13.9 12 13.9c3.39 0 5.99 1.03 7.55 2.98C17.94 19.36 15.16 21 12 21z"></path></svg>
+                    로그인
+                </a>
+            </div>
+        </header>
+        <aside>
+            <div class="asd_1">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img_Youtube/icn_home.svg" alt="홈페이지로 이동">홈
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img_Youtube/icn_shorts.svg" alt="숏츠로 이동">Shorts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img_Youtube/icn_subscribe.svg" alt="구독으로 이동">구독
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="asd_2">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_me.svg" alt="마이페이지로 이동">나  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_history.svg" alt="시청기록 페이지로 이동">시청기록   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="asd_3">
+                <p>로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다.</p>
+                <a href="#" class="btn_login">
+                    <svg class = "icn_login" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit;" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 1c4.96 0 9 4.04 9 9 0 1.42-.34 2.76-.93 3.96-1.53-1.72-3.98-2.89-7.38-3.03A3.996 3.996 0 0016 9c0-2.21-1.79-4-4-4S8 6.79 8 9c0 1.97 1.43 3.6 3.31 3.93-3.4.14-5.85 1.31-7.38 3.03C3.34 14.76 3 13.42 3 12c0-4.96 4.04-9 9-9zM9 9c0-1.65 1.35-3 3-3s3 1.35 3 3-1.35 3-3 3-3-1.35-3-3zm3 12c-3.16 0-5.94-1.64-7.55-4.12C6.01 14.93 8.61 13.9 12 13.9c3.39 0 5.99 1.03 7.55 2.98C17.94 19.36 15.16 21 12 21z"></path></svg>
+                    로그인
+                </a>
+            </div>
+            <div class="asd_4">
+                <h2>탐색</h2>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_Trending.svg" alt="인기급상승 페이지로 이동">인기급상승
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_shopping.svg" alt="쇼핑페이지로 이동">쇼핑
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_music.svg" alt="음악페이지로 이동">음악
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_movies.svg" alt="영화페이지로 이동">영화
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_live.svg" alt="실시간페이지로 이동">실시간
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_gaming.svg" alt="게임페이지로 이동">게임
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_sports.svg" alt="스포츠페이지로 이동">스포츠
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_courses.svg" alt="학습프로그램 페이지로 이동">학습 프로그램
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_podcasts.svg" alt="팟캐스트페이지로 이동">팟캐스트
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="asd_5">
+                <h2><b>YouTube</b> 더보기</h2>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_youtube premium.svg" alt="유튜브 프리미엄 페이지로 이동">YouTube Premium</a>  
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_youtube music.svg" alt="유튜브 뮤직 페이지로 이동">YouTube Music</a>   
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_youtube kids.svg" alt="유튜브 키즈 페이지로 이동">YouTube Kids</a>    
+                        </li>
+                    </ul>
+            </div>
+            <div class="asd_6">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_setting.svg" alt="설정 페이지로 이동">설정</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_report history.svg" alt="신고기록 페이지로 이동">신고기록</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_help.svg" alt="고객센터 페이지로 이동">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img_Youtube/icn_send feedback.svg" alt="의견 보내기 페이지로 이동">의견 보내기</a>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <ul>
+                    <li> <a href="#">정보</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">저작권</a></li>
+                    <li> <a href="#">문의하기</a> </li>
+                    <li><a href="#">크리에이터</a></li>
+                    <li><a href="#">광고</a></li>
+                    <li><a href="#">개발자</a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">약관</a></li>
+                    <li> <a href="#">개인정보처리방침</a></li>  
+                    <li> <a href="#">정책 및 안전</a></li>
+                    <li> <a href="#"><b>YouTube</b> 작동의 원리</a></li>
+                    <li> <a href="#">새로운 기능 테스트하기</a></li>
+                </ul>
+                <p class="copy">© 2024 Google LLC, Sundar Pichai, 1600 Amphitheatre Parkway, Mountain View CA 94043, USA, 0807-882-594 (무료), yt-support-solutions-kr@google.com, 호스팅: Google LLC, <a href="#">사업자정보</a>, <a href="#">불법촬영물 신고</a>
+                    크리에이터들이 유튜브 상에 게시, 태그 또는 추천한 상품들은 판매자들의 약관에 따라 판매됩니다. 유튜브는 이러한 제품들을 판매하지 않으며, 그에 대한 책임을 지지 않습니다.
+                    </p>
+            </footer>
+        </aside>
+        <main>
+            <div class="search_filter">
+                <ul>
+                    <li class="active"><a href="#">전체</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">뉴스</a></li>
+                    <li><a href="#">라이브</a></li>
+                    <li><a href="#">게임</a></li>
+                    <li><a href="#">관광</a></li>
+                    <li><a href="#">자연</a></li>
+                    <li><a href="#">최근에 업로드된 영상</a></li>
+                </ul>
+            </div>
+            <div class="normal">
+                <ul class="normal_contents">
+                    <li>
+                        <div class="thumb">
+                            <a href="./watch.html"><img src="./img_Youtube/thumb1.jpg" alt="하루종일 듣기 좋은 노래 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/author1.jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">【지브리】 행복한 기분 🌊 지브리 스튜디오에서 8시간의 릴렉스 음악</h3>
+                                <p class="author">BGM Piano</p>
+                                <p>조회수 259만회 &middot; 11개월 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (2).jpg" alt="하루종일 듣기 좋은 노래 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (3).jpg" alt="몽랙싱 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> 일할 때 듣기좋은 외국영화 OST 피아노 10시간 모음🎥 l 10Hours of Relaxing Piano (공부, 집중, 일, 힐링, 매장, 카페음악)</h3>
+                                <p class="author">몽렉싱피아노 MONGLAXING PIANO</p>
+                                <p>조회수 59만회 &middot; 2개월 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (1).jpg" alt="국경없는의사회 김지민 활동가 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (2).jpg" alt="국경없는의사회 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> [국경없는의사회] 당신과 함께 환자를 치료합니다 - 김지민 활동가</h3>
+                                <p class="author">국경없는 의사회</p>
+                                <p>조회수 163만회 &middot; 1년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720.jpg" alt="하루종일 듣기 좋은 노래 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (4).jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> [최신가요 실시간 인기차트] 2024년 8월 1일 1주차, 멜론차트 X, 종합차트O, 노래모음 KPOP 플레이리스트</h3>
+                                <p class="author">Cloud</p>
+                                <p>조회수 5.6만회 &middot; 5일 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault (4).jpg" alt="jazzpiano l 가장 좋아하는 시간 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (4).jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">Jazz piano 가장 좋아하는 시간</h3>
+                                <p class="author">Loo Piano 루 피아노</p>
+                                <p>조회수 199만회 &middot; 1년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault (7).jpg" alt="슬기로운 의사생활 수록곡 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile.jpg" alt="Stone Music Entertainment 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">[PLAYLIST] 다시 듣는 ‘슬기로운 의사생활’ OST｜'Hospital Playlist' OST Playlist｜Stone Music Playlist</h3>
+                                <p class="author">Stone Music Entertainment</p>
+                                <p>조회수 222만회 &middot; 3년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault.jpg" alt="디즈니/픽사 노래모음 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile(12).jpg" alt="슈바미 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">[playlist] 들으면 기분 좋아지는 디즈니/픽사 ost 모음</h3>
+                                <p class="author">슈바미</p>
+                                <p>조회수 2020만회 &middot; 3년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset">
+                                    <img src="./img_Youtube/btn_set.svg" alt="영상설정">
+                                </a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (12).jpg" alt="mbc뉴스 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/unnamed.jpg" alt="mbc뉴스 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">"조퇴해요!" 다급한 산후도우미 '촉 발동' 아기 아빠 대반전</h3>
+                                <p class="author">MBC News</p>
+                                <p>조회수 13.1만회 &middot; 1일 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset">
+                                    <img src="./img_Youtube/btn_set.svg" alt="영상설정">
+                                </a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img_Youtube/icn_share.svg" alt="공유">공유
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="shorts">
+                <h2><img src="./img_Youtube/icn_shorts (2).svg" alt="쇼츠아이콘">Shorts</h2>
+                <ul class="shorts_contents">
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oar2 (2).jpg" alt="햇볕 강함+더위미침 얼음 주머니 사용법 이주은">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">'햇볕 강함'+'더위미침' 얼음 주머니 사용법 이주은(LeLE)</h3>
+                                <p>조회수 203만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oar2 (1).jpg" alt="한국 색 본격적으로 지우기? 리사 솔로앨범에 외면">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">한국 색 본격적으로 지우기? 리사 솔로앨범에 외면</h3>
+                                <p>조회수 143만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (5).jpg" alt="해외에서 난리난 김건희 여사의 동안 외모">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">해외에서 난리난 김건희 여사의 동안 외모</h3>
+                                <p>조회수 172만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (7).jpg" alt="스타일리스트">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">스타일리스트</h3>
+                                <p>조회수 1469만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (10).jpg" alt="푸바오 사육사 뒷돈!! 할부지 강바오 중국">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">푸바오 사육사 뒷돈!! 할부지 강바오 중국</h3>
+                                <p>조회수 98만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (4).jpg" alt="모든 연예인이 손절하는 양세형의 실체">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">모든 연예인이 손절하는 양세형의 실체</h3>
+                                <p>조회수 328만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (8).jpg" alt="골프여신 유현주가 욕먹는 이유?">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">골프여신 유현주가 욕먹는 이유?</h3>
+                                <p>조회수 58만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (9).jpg" alt="마라탕후루 극혐하는 친오빠 앞에서 챌린지 추기 ㅋㅋㅋ">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">마라탕후루 극혐하는 친오빠 앞에서 챌린지 추기 ㅋㅋㅋ</h3>
+                                <p>조회수 314만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (6).jpg" alt="원탑 이민호의 화려했던 전여친들 모음!">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">원탑 이민호의 화려했던 전여친들 모음!</h3>
+                                <p>조회수 184만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn_more">더보기 <img src="./img_Youtube/arrow_bottom.svg" alt="아래화살표">
+                </button>
+            </div>
+            <div class="normal">
+                <ul class="normal_contents">
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/thumb1.jpg" alt="하루종일 듣기 좋은 노래 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/author1.jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">【지브리】 행복한 기분 🌊 지브리 스튜디오에서 8시간의 릴렉스 음악</h3>
+                                <p class="author">BGM Piano</p>
+                                <p>조회수 259만회 &middot; 11개월 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (2).jpg" alt="일할 때 듣기좋은 외국영화 OST 피아노 10시간 모음 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (3).jpg" alt="몽랙싱 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> 일할 때 듣기좋은 외국영화 OST 피아노 10시간 모음🎥 l 10Hours of Relaxing Piano (공부, 집중, 일, 힐링, 매장, 카페음악)</h3>
+                                <p class="author">몽렉싱피아노 MONGLAXING PIANO</p>
+                                <p>조회수 59만회 &middot; 2개월 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (1).jpg" alt="국경없는의사회 김지민 활동가 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (2).jpg" alt="국경없는의사회 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> [국경없는의사회] 당신과 함께 환자를 치료합니다 - 김지민 활동가</h3>
+                                <p class="author">국경없는 의사회</p>
+                                <p>조회수 163만회 &middot; 1년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720.jpg" alt="하루종일 듣기 좋은 노래 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (4).jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title"> [최신가요 실시간 인기차트] 2024년 8월 1일 1주차, 멜론차트 X, 종합차트O, 노래모음 KPOP 플레이리스트</h3>
+                                <p class="author">Cloud</p>
+                                <p>조회수 5.6만회 &middot; 5일 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault (4).jpg" alt="jazzpiano l 가장 좋아하는 시간 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile (4).jpg" alt="매일음악 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">Jazz piano 가장 좋아하는 시간</h3>
+                                <p class="author">Loo Piano 루 피아노</p>
+                                <p>조회수 199만회 &middot; 1년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault (7).jpg" alt="슬기로운 의사생활 수록곡 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile.jpg" alt="Stone Music Entertainment 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">[PLAYLIST] 다시 듣는 ‘슬기로운 의사생활’ OST｜'Hospital Playlist' OST Playlist｜Stone Music Playlist</h3>
+                                <p class="author">Stone Music Entertainment</p>
+                                <p>조회수 222만회 &middot; 3년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hqdefault.jpg" alt="디즈니/픽사 노래모음 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/channels4_profile(12).jpg" alt="슈바미 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">[playlist] 들으면 기분 좋아지는 디즈니/픽사 ost 모음</h3>
+                                <p class="author">슈바미</p>
+                                <p>조회수 2020만회 &middot; 3년 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset">
+                                    <img src="./img_Youtube/btn_set.svg" alt="영상설정">
+                                </a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="./img_Youtube/icn_share.svg" alt="공유">공유</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="#"><img src="./img_Youtube/hq720 (12).jpg" alt="mbc뉴스 - 섬네일"></a>
+                        </div>
+                        <div class="vinfo">
+                            <section class="ch1">
+                                <a href="#"><img src="./img_Youtube/unnamed.jpg" alt="mbc뉴스 채널 바로가기"></a>
+                            </section>
+                            <section class="desc">
+                                <h3 class="title">"조퇴해요!" 다급한 산후도우미 '촉 발동' 아기 아빠 대반전</h3>
+                                <p class="author">MBC News</p>
+                                <p>조회수 13.1만회 &middot; 1일 전</p>
+                            </section>
+                            <section class="set">
+                                <a href="#" class="vset">
+                                    <img src="./img_Youtube/btn_set.svg" alt="영상설정">
+                                </a>
+                                <ul class="hidden_menu">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img_Youtube/icn_add.svg" alt="재생목록추가">현재 재생목록에 추가
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img_Youtube/icn_share.svg" alt="공유">공유
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="shorts">
+                <h2><img src="./img_Youtube/icn_shorts (2).svg" alt="쇼츠아이콘">Shorts</h2>
+                <ul class="shorts_contents">
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oar2 (2).jpg" alt="햇볕 강함+더위미침 얼음 주머니 사용법 이주은">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">'햇볕 강함'+'더위미침' 얼음 주머니 사용법 이주은(LeLE)</h3>
+                                <p>조회수 203만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oar2 (1).jpg" alt="한국 색 본격적으로 지우기? 리사 솔로앨범에 외면">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">한국 색 본격적으로 지우기? 리사 솔로앨범에 외면</h3>
+                                <p>조회수 143만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (5).jpg" alt="해외에서 난리난 김건희 여사의 동안 외모">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">해외에서 난리난 김건희 여사의 동안 외모</h3>
+                                <p>조회수 172만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (7).jpg" alt="스타일리스트">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">스타일리스트</h3>
+                                <p>조회수 1469만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (10).jpg" alt="푸바오 사육사 뒷돈!! 할부지 강바오 중국">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">푸바오 사육사 뒷돈!! 할부지 강바오 중국</h3>
+                                <p>조회수 98만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (4).jpg" alt="모든 연예인이 손절하는 양세형의 실체">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">모든 연예인이 손절하는 양세형의 실체</h3>
+                                <p>조회수 328만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (8).jpg" alt="골프여신 유현주가 욕먹는 이유?">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">골프여신 유현주가 욕먹는 이유?</h3>
+                                <p>조회수 58만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (9).jpg" alt="마라탕후루 극혐하는 친오빠 앞에서 챌린지 추기 ㅋㅋㅋ">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">마라탕후루 극혐하는 친오빠 앞에서 챌린지 추기 ㅋㅋㅋ</h3>
+                                <p>조회수 314만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="shorts_thumb">
+                                <img src="./img_Youtube/oardefault (6).jpg" alt="원탑 이민호의 화려했던 전여친들 모음!">
+                            </div>
+                            <div class="shorts_vinfo">
+                                <section class="shorts_desc">
+                                <h3 class="title">원탑 이민호의 화려했던 전여친들 모음!</h3>
+                                <p>조회수 184만회</p>
+                                </section>
+                                <section class="shorts_set">
+                                    <a href="#" class="vset"><img src="./img_Youtube/btn_set.svg" alt="영상설정"></a>
+                                </section>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn_more">더보기 <img src="./img_Youtube/arrow_bottom.svg" alt="아래화살표">
+                </button>
+            </div>
+        </main>
+</body>
+</html>

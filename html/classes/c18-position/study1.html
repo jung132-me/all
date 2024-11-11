@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>position</h1>
+    <p>포지션은 일반적인 레이아웃이 아닌 특수 레이아웃으로만 사용한다.</p>
+    <p>여기서 일반적인 레이아웃이란 위에서 아래로 쌓이는 블록형 레이아웃 또는 나란히 배치하는 레이아웃을 말한다.</p>
+    <!-- 주로 팝업이나 사이드 바 레이아웃 할 때만 사용함. 그외 일반적인 레이아웃에 사용하면 안됨(매우 복잡해짐) -->
+    <hr>
+
+    <h2>position:relative;</h2>
+    <p>position:relative가 설정된 태그는 현재 위치를 기준으로 left/right/top/bottom이 4가지 값을 통하여 위아래좌우로 이동시킬 수 있다.</p>
+    <div class="box a">
+        포지션이 relative로 설정된 태그는 원래 있었던 위치를 기준으로 배치가 된다. 그리고 원래 있었던 위치를 기억하여 그래도 자리를 차지한다.(공중에 뜨지 않음)
+    </div>
+    <hr>
+    <h2>position:absolute;</h2>
+    <p>position:absolute;가 설정된 태그는 자신을 포함하는 가까운상위태그 중에서 position이 설정된 태그(relative,absolute,fixed)의 영역을 기준으로 배치된다.(*기준이 매우 명확한 상황에서 사용해야함. 그렇지 않으면 계속 거슬러 올라가서 body태그 기준으로 배치되기 때문)</p>
+    <p>absolute방식은 공중에 띄워서 배치하기 때문에 공간차지를 하지 않는다.</p>
+    <p>공중에 띄워서 배치될 때 z-index값이 클 수록 앞쪽에 배치된다. 기본값은 0이며 나중에 만든 태그일수록 앞쪽에 배치되는 특징을 갖는다.</p>
+
+    <div class="frame">
+        <div class="con">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cupiditate eos neque necessitatibus dignissimos voluptatibus amet impedit eveniet repellendus nulla culpa sapiente, voluptates modi. Illum, ad alias. Accusantium, corporis aperiam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsa iste odit, hic repellat doloremque eius laborum. Sequi perspiciatis natus nesciunt tempore. Voluptatem, laborum. Quam consequuntur tempora neque reprehenderit pariatur!
+        </div>
+    </div>
+
+    <div class="boxwrap">
+        <div class="innerBox"> 
+            <div class="box b"></div>
+            <div class="box c"></div>
+            <div class="box d"></div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>position:fixed;</h2>
+    <p>기본적으로 absolute와 모든 특징이 같다.(띄워서 배치, 공간차지를 하지 않음)</p>
+    <p>기준영역이 언제나 화면(view-port)이다.</p>
+    <div class="box e">       
+    </div>
+
+    <hr>
+    <h2>position-sticky</h2>
+    <p>position-sticky속성이 적용된 태그는 문서의 흐름에 따라 일반적인 위치에 배치된다.</p>
+    <p>그러나, 스크롤을 내려서 position:sticky;속성이 적용된 태그가 브라우저 화면의 상단 부분에 부딪힐 때까지만 일반적인 위치에 배치가 되고 그 이상 스크롤을 내리게 되면 화면(view-port)에 고정되는 fixed형식으로 배치된다.</p>
+    
+    <h2>Sticky가 적용되기 위해서는 아래와 같은 조건이 필요하다.</h2>
+    <ul>
+        <li>부모태그에 overflow가 설정되면 sticky가 작동하지 않는다.(overflow:hidden이 설정되면 안됨)</li>
+    </ul>
+    <div class="box f"></div>
+    <div style="height: 200vh;"></div>
+
+</body>
+</html>

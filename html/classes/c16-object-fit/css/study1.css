@@ -1,0 +1,14 @@
+.a{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+.b{
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0% 50%;
+    /* object-position속성은 object-fit:cover속성일 때 사용하는 속성으로 cover속성 값이 적용되어 있을 때는 잘려서 안보이는 부분이 생길 수 있으므로 그런 부분들을 볼 수 있도록 좌표값을 입력하여 볼 수 있는 속성이다. */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img태그/video태그</title>
+</head>
+<body>
+    <h1>이미지 태그</h1>
+    <p>홈페이지에서 이미지파일을 연결하여 보여주는 태그</p>    
+    <p>src속성은 이미지파일까지의 경로를 입력하면 된다</p>
+    <P>alt속성은 이미지를 설명한느 대체텍스트를 입력하면 된다</P>
+    <p>이미지태그는 src속성과 alt속성 뒤개는 필수적으로 사용해야 웹표준을 준수할 수 있다</p>
+    <hr>
+    <p>이미지태그는 jpg,png,gif,svg 파일 등 대부분의 이미지 파일들을 연결하여 출력할 수 있다</p>
+    <p>단, 브라우저에서 열 수 없는 파일들은 이미지 태그에 연결해도 보이지 않는다. (예. psd/ai/파일 등등)</p>
+    <p>이미지 태그는 문맥의 뜻이 없다. 글자와 같은 컨텐츠이다.</p>
+    <p>이미지 태그는 글자처럼 취급한다.</p>
+    <p>이미지 태그는 글자처럼 baseline을 따라서 배치된다. </p>
+    <p>웹사이트에서 이미지를 사용할 때는 이미지 용량이 크면 클 수록 홈페이지에 부담이 된다. 왜냐하면 이미지소스를 다운받은 후에 홈페이지가 그려지기 때문이다. 그렇기 때문에 적합한 해상도의 이미지를 사용해야 한다.(가로사이즈 최대 1920 픽셀 사용 권장) </p>
+    <p>나 김정민은 <a href="https://ko.wikipedia.org/wiki/%EC%83%8C%ED%83%80%EB%AA%A8%EB%8B%88%EC%B9%B4"><img style="height: 20px;" src="./imgs/pexels-hudson-mcdonald-692563691-28209792.jpg" alt="산타모니카"></a>에 놀러가고 싶었다.</p>
+
+    <hr>
+
+    <h1>video태그</h1>
+    <p>비디오파일을 연결해서 화면에 보여주는 태그</p>
+    <p>비디오태그는 문맥의 뜻이 없다. 이미지와 같은 그리고 글자와 같은 컨텐츠이다.</p>
+    <hr>
+    <p style="font-size: 80px;">저희 집에 있는 <video style="width: 80px;" src="./videos/217115_small.mp4" loop autoplay muted></video>을 소개합니다.</p>
+    
+    <h2>컨트롤러만 활성화</h2>
+    <video style="width: 400px;" src="./videos/217115_small.mp4" controls></video>
+    <h2>컨트롤러 활성화 / 무한반복</h2>
+    <video style="width: 400px;" src="./videos/217115_small.mp4" controls loop></video>
+    <h2>컨트롤러 비활성화 / 무한반복 / 자동재생</h2>
+    <p>영상을 자동재생하기 위해서는 반드시 음소거 속성을 같이 써야 한다.</p>
+    <video style="width: 400px;" src="./videos/217115_small.mp4" loop autoplay muted></video>
+    <h2>썸네일 이미지 지정 / 컨트롤러 활성화</h2>
+    <video style="width: 400px;" src="./videos/217115_small.mp4" controls poster="./imgs/pexels-hudson-mcdonald-692563691-28209792.jpg"></video>
+
+    <hr>
+    <h2>여러 종류의 영상을 한번에 등록할 수 있도록 비디오태그를 구성하는 것이 가능하다.</h2>
+    <video autoplay muted loop>
+        <source src="./videos/video.webm" type="video/webm">
+        <source src="./videos/video.mp4" type="video/mp4">
+    </video>
+</body>
+</html>

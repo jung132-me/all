@@ -1,0 +1,59 @@
+p{
+    color: red;
+}
+div p{
+    /* div태그 안에 포함된 자손들 중에서 모든 p태그들을 선택 */
+    color: blue;
+}
+div>p{
+    /* div태그 안에 포함된 자식들 중에서 모든 p태그들을 선택 */
+    color: green;
+}
+.box>p{
+    color: purple
+}
+.box li>p{
+    color: orange;
+}
+.list1~li{
+    /* list1클래스의 다음형제 태그들 중에서 li태그들 선택 */
+    background: pink;
+}
+.list1+li{
+    /* list1클래스의 다음형제 태그 li태그 1개만 선택 */
+    background: blue;
+}
+.list1+.box{
+    display: none;
+}
+.box2>h3:nth-child(3){
+    /* box2클래스의 자식태그 h3태그이면서 3번째 자식을 선택 */
+    /* 만약에 3번째 자식이 h3가 아니라 p면 선택이 안됨 */
+    color: red;
+}
+.box2>h3:nth-of-type(3){
+    /* box2클래스의 자식 h3태그타입 중에서 3번째 태그를 선택 */
+    /* 이 경우에는 p가 h3와 같은 타입이 아니기 때문에 포함되지 않고 카운트 됨 */
+    color: blue;
+}
+.list_box>li:nth-of-type(2n){
+    font-size: 3rem;
+}
+.list_box>li:nth-of-type(2n+1){
+    text-decoration: underline;
+}
+.list_box>li:nth-of-type(3n+1){
+    color: red;
+}
+a[target="_blank"]{
+    background: #000;
+    color: #fff;
+}
+a[href="http://www.naver.com"]{
+    color: #aaa; 
+    text-decoration: line-through; /*취소선 스타일*/
+     pointer-events: none; /* 클릭이 안되게 함 */
+}
+p[data-jm="정민설명"]{
+    font-style: italic;
+}

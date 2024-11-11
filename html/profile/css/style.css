@@ -1,0 +1,573 @@
+
+/* /////////////pc 디자인 /////////////// */
+
+header{
+    height: 5rem;
+    width: 100%;
+    background-color: var(--main-color);
+    /* 투명한 배경 내비게이션 레이아웃 코딩
+    background-color:var(--main-color) 지우고,
+    border-bottom: 1px solid var(--main-color) */
+    position: fixed;
+    left: 0;
+    top: 0;    
+    z-index: 1000;
+}
+header .innerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.mo{display: none;}
+.gnb{
+    display: flex;
+    text-transform: uppercase;
+    /* 타원 네비게이션 레이아웃 
+    background: var(--main-color) 
+    color : #fff
+    padding: 0.75rem, 2rem
+    border-radius: 3rem
+    */
+}
+.gnb>li{
+    margin-right: 3rem;
+}
+.gnb>li:last-of-type{
+    margin-right: 0;
+}
+.hero{
+    height: 100vh;
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.heroDesc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: #fff;
+}
+.heroDesc .innerContent{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+.heroDesc h4{
+    font-size: 3.15rem;
+}
+.innerContent h4{
+    margin-bottom: 2rem;
+}
+
+/* 히어로 섹션 상단에 적혀 있는 이름란을 하단에 배치하고 싶은 경우
+.heroDesc h3{
+    position: absolute;
+    left: calc(50% -  350px);
+    bottom: 2rem;
+    border: 1px solid rgb(55, 40, 70);
+    width: 350px;}
+    /* 글자라 너비가 정해지지 않았음. 그래서 중앙에 배치하기 위해 임의로 너비 지정 */
+
+/* .heroDesc{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: calc(100% - 100px);
+} */
+
+/* .title{
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    font-size: var(--font-size-pc);
+    color: #fff;
+    z-index: 2;
+}
+.title>h1{
+    font-size: 3rem;    
+    color: #fff;
+}
+span{
+    color: var(--main-color);
+} */
+.con1{
+    padding-top: 7.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.con1:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+.con1img{
+    margin-top: 4rem;
+    line-height: 0;
+    margin-bottom: 3.5rem;
+    /* 원래는7.5 */
+}
+.desc{
+    margin-bottom: 4rem;
+}
+
+.con2{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+.con2 .innerContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.con2 section{
+    width: calc(50% - 3.5rem);
+    /* 섹션이 각각 부모태그의 50%만큼 설정되도록 함
+    3.5rem은 가운데 여백 너비 */
+    /* box-sizing: border-box; */
+}
+/* .pro1{
+    height: 35.75rem;
+
+} */
+.pro1>p{
+    margin-bottom: 1.5rem;
+}
+.pro1>p:last-of-type{
+    margin-bottom: 0;
+}
+.pro2 dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pro2 dl>dt{
+    width: 12rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.pro2 dl>dd{
+    width: calc(100% - 12rem);
+}
+.pro2 p{
+    margin-bottom: 1.5rem;
+}
+.pro2 p:last-of-type{
+    margin-bottom: 0;
+}
+.charList{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.charList>li{
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 0.7rem 1.5rem;
+}
+.charList>li.rev{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.pro3{
+    margin-top: 6.5rem;
+}
+.pro3 dt{
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+.certList>li{
+    margin-bottom: 1rem;
+    display: flex;
+}
+.certList>li>i{
+    width: 12rem;
+}
+.certList>li>span{
+    width: calc(100% - 12rem);
+}
+.certList>li:last-of-type{
+    margin-bottom: 0;
+}
+.con3{
+    background-color: var(--main-color);
+    padding: 3.5rem 0;
+    /* color: #fff; */
+}
+.con3 h5{
+    margin-bottom: 1.5rem;
+    font-weight: var(--font-weight-bold);
+}
+.eduList{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 한 열에 리스트가 3개가 있다면 쓸 수도 있지만, 추후에 리스트 추가 가능성을 위해 space-between말고 마진을 왼쪽이나 오른쪽에 주는 것이 맞음 */
+.eduList h6{
+    font-weight: var(--font-weight-bold);
+}
+.eduList>li{
+    width: calc((100% - (3 - 1)*1rem)/3);
+    /* 2rem은 거터, 각 배치된 리스트 들의 간격 1rem인데 2개 있어서 2rem / 3은 한 줄에 3개 영역이 나열 되어 있어서 3으로 나눔  */
+    /* 추후에 한 열에 2개 영역만 배치되는 것으로 변경할 시 위에 3이라고 써있는 것을 전부 2로 변경해주면 됨. 거터의 경우에는 2영역 배치시 1개가 되니까 (2 - 1)로 해주면 됨. */
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+}
+.eduList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.eduList h6 img{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.eduList h6{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.con4{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+.popupList{
+    margin-top: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.popupList li{
+    width: calc((100% - (3 - 1)*1rem)/3);
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: 1rem 0;
+}
+.popupList>li:nth-of-type(3n){
+    margin-right: 0;
+}
+.popupList>li figure{
+    margin-bottom: 1rem;
+    line-height: 0;
+}
+
+.popupList>li>div:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popupList>li>div:nth-of-type(1) h6{
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+}
+.btnDown{
+    font-size: 0.9rem;
+    padding: 0.7rem 1.8rem;
+    background-color: #000;
+    color: #fff;
+}
+.btnDown:hover{
+    color: var(--main-color);
+}
+.btnDown:active{
+    border: 1px solid #000;
+    background-color: var(--main-color);
+    color: #000;
+}
+.popupList>li>figure.border{
+    border: 1px solid #000;
+}
+.popupList>li>p{
+    margin: 1rem 0;
+}
+.popupList>li>div:nth-of-type(2){
+    display: flex;
+}
+.popupList>li>div:nth-of-type(2) dl{
+    flex: 1;
+    /* 아이템들이 1:1 너비로 공간을 나눠갖는다라는 의미 */
+}
+.popupList>li>div:nth-of-type(2)>dl dt{
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.popupList>li>div:nth-of-type(2)>dl dd{
+    display: flex;
+    align-items: center;
+}
+.thumbColor{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 0;
+    margin-right: 0.5rem;
+}
+.color_14F4E4{
+    background-color: #14F4E4;
+    box-sizing: border-box;
+    border: none;
+}
+.color_000000{
+    background-color: #000;
+    box-sizing: border-box;
+    border: none;
+}
+.color_ffffff{
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.color_AB1F23{
+    background-color: #AB1F23;
+    box-sizing: border-box;
+    border: none;
+}
+.color_006838{
+    background-color: #006838;
+    box-sizing: border-box;
+    border: none;
+}
+.color_F6921D{
+    background-color: #F6921D;
+    box-sizing: border-box;
+    border: none;
+}
+.color_F7941D{
+    background-color: #F7941D;
+    box-sizing: border-box;
+    border: none;
+}
+.color_72BE44{
+    background-color: #72BE44;
+    box-sizing: border-box;
+    border: none;
+}
+.color_03FF7B{
+    background-color: #03FF7B;
+    box-sizing: border-box;
+    border: none;
+}
+.color_F75731{
+    background-color: #F75731;
+    box-sizing: border-box;
+    border: none;
+}
+.color_121212{
+    background-color: #121212;
+    box-sizing: border-box;
+    border: none;
+}
+.color_FFC73E{
+    background-color: #FFC73E;
+    box-sizing: border-box;
+    border: none;
+}
+.color_F8F287{
+    background-color: #F8F287;
+    box-sizing: border-box;
+    border: none;
+}
+.color_FFFACC{
+    background-color: #FFFACC;
+    box-sizing: border-box;
+    border: none;
+}
+.color_FF4400{
+    background-color: #FF4400;
+    box-sizing: border-box;
+    border: none;
+}
+.color_C6FFC3{
+    background-color: #C6FFC3;
+    box-sizing: border-box;
+    border: none;
+}
+.color_6A6CB7{
+    background-color: #6A6CB7;
+    box-sizing: border-box;
+    border: none;
+}
+.color_E6E0D0{
+    background-color: #E6E0D0;
+    box-sizing: border-box;
+    border: none;
+}
+.color_ECE2D6{
+    background-color: #ECE2D6;
+    box-sizing: border-box;
+    border: none;
+}
+.color_ebbcd7{
+    background-color: #ebbcd7;
+    box-sizing: border-box;
+    border: none;
+}
+.color_6d4c48{
+    background-color: #6d4c48;
+    box-sizing: border-box;
+    border: none;
+}
+.color_89916b{
+    background-color: #89916b;
+    box-sizing: border-box;
+    border: none;
+}
+.color_fff5ae{
+    background-color: #fff5ae;
+    box-sizing: border-box;
+    border: none;
+}
+.color_230905{
+    background-color: #230905;
+    box-sizing: border-box;
+    border: none;
+}
+.color_ff57fd{
+    background-color: #ff57fd;
+    box-sizing: border-box;
+    border: none;
+}
+.color_1eb7ff{
+    background-color: #1eb7ff;
+    box-sizing: border-box;
+    border: none;
+}
+.color_15eabc{
+    background-color: #15eabc;
+    box-sizing: border-box;
+    border: none;
+}
+.color_1be669{
+    background-color: #1be669;
+    box-sizing: border-box;
+    border: none;
+}
+.color_c011f3{
+    background-color: #c011f3;
+    box-sizing: border-box;
+    border: none;
+}
+.color_dc4b2c{
+    background-color: #dc4b2c;
+    box-sizing: border-box;
+    border: none;
+}
+.color_fdcd06{
+    background-color: #fdcd06;
+    box-sizing: border-box;
+    border: none;
+}
+.con5{
+    padding-top: 7rem;
+}
+.slideStation{
+    overflow: hidden;
+    margin-top: 3rem;
+    position: relative;
+}
+.con5 .innerContent{
+    text-align: center;
+}
+.pagination{
+    position: absolute;
+    left: 50%;
+    top: calc(600px - 2rem);
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+}
+.pagination span{
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #b7d9f5;
+    font-size: 0;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+.pagination span.on{
+    background-color: var(--main-color);
+}
+.train{
+    width: 600%;
+    /* 삽입할 배너 수 만큼 늘림(개당 100%) */
+    display: flex;
+    transition: all 0.5s ease 0s;
+    /* animation: slideMoveHorizontal 18s ease 0s infinite; */
+}
+.train>li{
+    flex: 1;
+    /* 여백과 너비를 1:1 비율로 나눠가지게 하는 속성 width 를 100%/6개하지 않아도 됨 */
+}
+.train>li figure{
+    line-height: 0;
+    /* width: 100%; */
+    height: 600px;
+}
+.train>li figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.train>li .innerContent{
+    display: flex;
+    text-align: left;
+    margin-top: 2rem;
+}
+.train>li .innerContent section{
+    flex: 1;
+/* flex basis : 0%, flex grow : 1 flex shrink: 1 */
+
+}
+.train>li .innerContent>section:nth-of-type(1){
+    margin-right: 7rem;
+    
+}
+.train>li .innerContent section div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.train>li .innerContent section div h6{
+    font-weight: var(--font-weight-bold);
+} 
+.train>li .innerContent>section:nth-of-type(2){
+    display: flex;
+}
+.train>li .innerContent>section dl{
+    flex: 1;
+}
+.train>li .innerContent>section dl:nth-of-type(1){
+    margin-right: 1rem;
+}
+.train>li .innerContent>section dl dt{
+    padding: 0.65rem 0;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+.train>li .innerContent>section dl dd{
+    display: flex;
+    align-items: center;
+}

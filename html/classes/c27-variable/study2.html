@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학계산관련함수</title>
+</head>
+<body>
+    <h1>수학계산관련 함수</h1>
+    <p>모두 결과를 계산해서 함수가 사용되었던 자리에 결과 값을 남긴다.</p>
+    <script>
+        console.log(Math.ceil(5.273648)) //올림
+        console.log(Math.round(5.473648)) //근접한 값
+        console.log(Math.floor(5.973648)) // 소숫점 뒤 숫자가 높아져도 앞의 값만 반환( 답은 5)
+        console.log(Math.pow(10,2))  //제곱값 
+        console.log(-Math.sqrt(100)) //루트씌운 값, 앞에 마이너스 부호 입력하면 마이너스 값이 나옴
+        console.log(Math.abs(-30)) // 절대값을 구할 때 사용
+        console.log(Math.max(13,2,10,50,-37)) //최대값 구함
+        console.log(Math.min(13,2,10,50,-37)) //최소값 구함
+        console.log(Math.random())  // 새로고침을 누르면(함수가 시동이 될때마다) 랜덤으로  0<랜덤수<1 랜덤수를 뽑아내는 함수
+        let dice = Math.ceil(Math.random()*6) // 소숫점은 삭제되고 올림값인 1,2,3,4,5,6 사이 숫자들이 나옴(ceil의 영향)
+        console.log(dice) //랜덤으로 숫자 추출 
+        console.log("나폴리맛피아"[dice-1])
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 제어하기</title>
+</head>
+<body>
+    <h1>태그의 속성 편집하기</h1>
+    <p>태그가 갖고있는 속성 값을 설정하거나 가져올 수 있다.</p>
+    <img src="./imgs/braden-collum-75XHJzEIeUc-unsplash.jpg" alt="이미지1" class="img1">
+    <script>
+        let img1 = document.querySelector(".img1")
+        console.log(img1.getAttribute("src"))
+        img1.setAttribute("src","./imgs/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg")
+        img1.setAttribute("alt","이미지2")
+        img1.setAttribute("data-source","data1")
+    </script>
+    <h1>태그의 컨텐츠 편집하기</h1>
+    <p>태그의 컨텐츠를 다른 내용으로 변경할 수 있다.</p>
+    <p class="tt">이 내용은 다른 내용으로 변경됨.</p>
+    <script>
+        let tt = document.querySelector(".tt")
+        console.log(tt. textContent)
+        tt.innerHTML = "새롭게 바뀐 내용"
+    </script>
+    <h1>태그의 클래스 편집하기</h1>
+    <p>선택된 태그의 클래스를 변경할 수 있다.</p>
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magni fugit iure odio placeat cupiditate magnam iusto incidunt expedita hic provident impedit delectus voluptas, eligendi dicta, voluptate rerum excepturi. Alias!</p>
+    <script>
+       let a = document.querySelector(".a")
+       a.classList.add("on")  // class 추가 하는 속성 
+       a.classList.add("active")
+       a.classList.remove("active") // class를 지우는 속성
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터형태 함수 - function</title>
+</head>
+<body>
+    <h1>함수 - function</h1>
+    <p>자바스크립트에서 동작을 표현하는 데이터 형태</p>
+    <p>크게 표준내장함수와 사용자정의함수로 나누어 볼 수 있다.</p>
+    <p>함수동작 안에서 return 키워드를 만나면 함수가 종료됨과 동시에 return 오른쪽의 값을 함수가 사용되었던 그 자리에 남긴다.</p>
+
+    <h2>표준내장함수</h2>
+    <p>브라우저에 이미 정의가 되어있는 함수를 의미한다.</p>
+    <p>별도로 정의하지 않아도 불러서 사용할 수 있는 도구와 같다. ex.alert(), console.log() .... 등등</p>
+
+    <h2>사용자 정의함수</h2>
+    <p>개발자가 직접 필요에 따라 정의하여 사용하는 함수를 의미한다.</p>
+
+    <ol>
+        <li>함수를 정의한다. - function 등록할함수명(재료통로==매개변수){동작소스코드}</li>
+        <li>함수를 호출한다. - 등록한함수명(사용할 재료==인자) </li>
+    </ol>
+
+    <h2>함수 안에서 return 표현</h2>
+    <p>함수 안에서 return이라는 키워드를 입력하면 함수는 그 즉시 실행종료가 되며, return 키워드 오른쪽에 잇는 값을 함수가 사용되었던 자리에 남기고 사라진다.</p>
+
+    <script>
+
+        //매개변수가 사용되지 않는 함수
+        //정의후 - 선언부
+        function a(){
+            //동작하는 소스코드
+            document.write("안녕하세요")
+        }
+
+        //실행부 - 호출부
+        a() //a라는 함수를 실행함
+        a()
+
+        //매개변수가 사용되는 함수
+        function b(name){ //매개변수
+            document.write(name+"님 안녕하세요")
+        }
+        b("김정민") //인자, 이것이 올라가 name에 저장이되면서 그 아래 도큐멘트에 추출되는 것. 하지만 저장이되는 것은 가시적으로는 생략되어 있다. 
+        function c(name,age){
+            document.write(name+"님은 "+age+"살 이시군요.")
+        }
+        c("김정민",29)
+        c("김리희",27)
+        function d(name){
+            document.write(name[0]+"씨는 안녕하신가?")
+        }
+        d("정현진")
+        d(["정","현","진"])
+        d({name:"정현진",age:44}) //입력이 잘못된 경우(undefined로 추출됨)
+        // 이것은 함수의 안에서 사용되는 매개변수는 문자나 배열이 올 것을 생각하고 만든 함수인데, 현재 이 부분은 매개변수에 전달하는 인자로 객체데이터 형태를 사용하고 있기 때문에 원활하게 name[0]을 해석할 수 없어서 에러가 난다.
+
+        function e(person){
+            document.write(`${person.name}님은 ${person.age}세 이시군요.`)
+        }
+        e({name:"정현진",age:44})
+
+        function f(){
+            document.write("하하하<br>")
+            document.write("배고프다")
+            return 100
+            document.write("곧 점심이다!")
+        }
+        // alert(f()+f())
+        //Math.round(1.544) // 소수를 반올림 계산하여 결과를 리턴하는 함수
+        //prompt("나이를 입력하세요") //사용자가 입력한 대답을 문자데이터로 리턴하는 함수
+        // typeof("하이") // 괄호 안에 있는 데이터 형태를 검사하고 검사결과를 문자데이터 형태로 리턴하는 함수
+
+        function g(num1, num2){
+            let result
+            result = num1+num2
+            return result
+        }
+        console.log(g(20,30))
+        console.log(g(g(10,g(20,30)),g(10,g(5,80)))) 
+
+        function h(person){
+            let result = `그 사람의 이름은 ${person.name}이고, 나이는 ${person.age}살이며 ${person.gender}이다.`
+            // return result
+            return [person.name, person.age, person.gender] // 결과 값으로 배열이 남게 됨      
+        }
+        // document.write(h({name:"정현진",gender:"남자",age:40})) 
+        console.log(h({name:"정현진",gender:"남자",age:40})[1]) //return 옆 괄호에는 이름, 나이, 성별 순으로 순차적으로 지정이 되었기 때문에 [1]번째에 나오는 값은 나이가 됨. 
+        //같은 공간 안에 동일한 이름을 가진 폴더(ex.g,h 등등)는 만들 수 없으나 이름이 다른 폴더 안에서는 동일한 이름을 가진 파일(ex.result)을 만들 수 있음
+        
+        function i(callback){
+            //callback = function(){ alert("hello!")}
+            //아래에서 i라는 함수를 실행했을 때, 인자로 입력한 function(){}형태를 가진 익명함수가 i라는 함수 내부에서 새롭게 정의되고 그렇기 때문에 함수가 실행될 수 있다.
+            callback()
+        }
+        i(function(){
+            alert("hello!")
+        }) //이름이 없는 익명함수
+        
+        let a1 = 33
+        let a2 = "안녕"
+        let a3 = true
+        let a4 = [1,2,3]
+        let a5 = {name:"정민", age:29}
+        let a6 = function(){
+            alert("a6") //a6라는 함수에 얼럿함수가 저장되는 것
+        }
+        a6() //익명의 함수를 동작한다는 의미
+        function aa(){
+            alert("a")
+        }
+
+    </script>
+</body>
+</html>

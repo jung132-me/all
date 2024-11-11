@@ -1,0 +1,41 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+.frame_wrap{
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    padding: 20px 30px;
+    width: 1000px;
+}
+.common_frame{
+    border-bottom: 1px solid #555;
+    padding: 20px;
+
+}
+.frame_1{
+    padding-top: 30px;
+}
+
+.common_frame.frame_2{
+    border: none;
+}
+.a{
+    padding: 10px 0;
+    background-color: salmon;
+    height: 150px;
+}
+.b{
+    background-color: sandybrown;
+    box-sizing: border-box;
+    height: 200px;
+    border: 10px solid seagreen;
+}
+.c{
+    background-color: saddlebrown;
+    height: 250px;
+    padding: 10px;
+    border: 10px solid violet;
+    box-sizing: border-box;
+}
+

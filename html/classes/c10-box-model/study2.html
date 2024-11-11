@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델 응용</title>
+    <link rel="stylesheet" href="./css/study2.css">
+</head>
+<body>
+    <h1>박스모델 응용</h1>
+    <hr>
+    
+    <div class="box1">
+        이 태그는 width:50%로 설정이 되어 있기 때문에 부모태그 너비의 50%만큼으로 계산된 수치가 px값으로 적용된다. 그리고 이 태그는 부모가 body태그이기 때문에 50%만큼 계산되므로 화면너비에 반응하여 줄어들거나 늘어난다.
+    </div>
+    <div class="box2">
+        <section>
+            현재 box2클래스는 width:1000px로 설정되어있다. 1000px은 고정값이므로 브라우저 사이즈를 늘리거나 줄여도 반응하지 않는다. 그래서, 브라우저의 가로너비를 1000픽셀보다 작게 줄이게 된다면 브라우저의 하단 부분에 가로스크롤이 생기게 된다.<br>    
+            그리고 box2클래스의 자식태그롤 section태그가 있는데 현재 width:50%로 설정되어 있다. %단위는 css에서 부모태그에 대한 비율단위로 사용이 된다. 그러므로 현재 부모태그너비 1000에 대한 50%이므로 500px로 계산되고 있다. 이 500픽셀은 고정값이므로 화면너비에 반응하여 줄어들거나 늘어나지 않는다.
+        </section>
+    </div>
+    <div class="box3">
+        <section>box3클래스는 widhth:800px 고정값으로 설정되어 있지만, 이 섹션 태그는 widht:50vw;height:30vh로 설정되어 있기 때문에 너비는 화면너비에 대하여 50%로 설정되고 높이는 화면높이에 대하여 30%로 계산되어 설정된다. </section>
+    </div>
+    <div class="box4">
+        box4클래스는 현재 width:auto가 적용되어 있는 상황이다. 그렇기 때문에 브라우저의 너비에서 margin-left:100px 속성으로 인하여 컨텐츠 박스의 너비가 100픽셀만큼 줄어들었다. 그리고 사방에 border:10px solid black 속성으로 인하여 양쪽으로 10픽셀만큼 너비가 줄어들었다. 전체적으로 브라우저의 너비가 120픽셀만큼 제외한 너비가 현재 box4클래스의 너비이다.
+    </div>
+    <div class="box5">
+        이 태그는 width:100%로 설정되어 있다. 이 태그의 부모태그는 body태그이므로 body태그의 너비만큼 box5클래스의 너비가 픽셀로 계산되어 설정된다. 그 계산된 너비는 이 box5클래스의 컨텐츠 박스 너비이므로 추가적으로 사방에 그려진 border 10픽셀과 margin-left:100px의 영향을 받아 가로스콜리 120픽셀만큼 만들어졌다.
+    </div>
+</body>
+</html>

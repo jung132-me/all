@@ -1,0 +1,67 @@
+.box{
+    border: 5px solid lightseagreen;
+    width: 300px;
+    height: 300px;
+}
+.a{
+    transform: translateX(100%);
+    /* 일반적으로 부모태그, 혹은 화면이 너비 100%를 기반으로 조정되었지만, 
+    transform 사용시 자신이 가지고 있는 너비의 100%만큼 이동한다는 의미
+    그러므로 여기서 100%는 300px에 대한 100% */
+}
+.b{
+    transform: translateY(-50%);
+    /* 여기서 박스의 높이가 300px이기 때문에 그에 절반(50%)인 150px만큼 위로 이동함 */
+}
+.parent{
+    background-color: lightblue;
+    perspective: 1000px;
+    /* 앞으로 1000px만큼 거리가 벌어진 다는 뜻 */
+    min-height: 900px;
+    perspective-origin: 50%  50%;
+    /* 중심점이 이동(x좌표 y좌표), 가장 먼곳의 좌표를 설정할 수 있음. 기본값은 50% 50%*/
+}
+.c{
+    margin-left: auto;
+    transform: translateZ(100px);
+    /* 입체 사각형뿔 안에 있다고 생각, 사각형 중심 점이 꼭지점. 마이너스 값을 입력할 수록 꼭지점 쪽으로 이동하고(멀어지는 느낌), 플러스값을 입력할 수록 바깥으로 이동하게 됨.약간 아래 사각형의 너비가 넓어지는 느낌으로. */
+}
+.d{
+    transform-origin: 100% 50%;
+    /* 변형의 기준좌표 - 50% 50% 가 기본값 */
+    transition: all 1s ease 0s;
+}
+.d:hover{
+    transform: rotate(30deg);
+}
+.e:hover{
+    transform: rotateY(360deg);
+}
+.e,.f{
+    transition: all 3s ease 0s;
+}
+.f:hover{
+    transform: rotateX(180deg);
+}
+.g{
+    margin: 0 auto;
+    transition: all 1s ease 0s;
+    transform-origin: 50% 100%;
+}
+.g:hover{
+    transform: scaleX(200%);
+}
+.h{
+    transition: all 1s ease 0s;
+}
+.h:hover{
+    transform: scaleY(200%);
+}
+.i{
+    transition: all 1s ease 0s;
+}
+.i:hover{
+    transform: scale(2);
+    /* scale을 증가하는 값이 같으면 축약하여 숫자 하나로 쓸 수 있고, 
+    (x,y)좌표 따로 설정하는 것도 가능 */
+}

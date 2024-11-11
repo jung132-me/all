@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일의 상속</title>
+    <style>
+        .parent{color: red;}
+        h3{color: blue;}
+        .parent h3{color: aqua;}
+        div.parent h3{color: darkcyan;}
+        div.parent h3{
+        color: darkcyan;
+        font-size: 50px;
+        background: #81c359;}
+
+    </style>
+</head>
+<body>
+    <h1>스타일의 상속</h1>
+    <p>부모태그가 자식태그에게 스타일을 물려주는 행위</p>
+    <p>스타일의 상속은 언제나 일어나지 않는다 -> 모든 css속성이 자식태그에게 상속되지는 않는다.</p>
+    <p>주로 글씨색상과 크기 등 글씨와 관련된 css속성은 상속된다.</p>
+    <p>부모로부터 상속받는 상속스타일은 우선순위점수와 관계없이 언제나 후순위로 밀린다.</p>
+
+    <div class="parent">
+        <h3>title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt explicabo aut recusandae dolore ad, quaerat pariatur est amet sapiente sint cum omnis sequi quia exercitationem eveniet delectus nostrum voluptate?</p>
+        <div class="frame">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, quia? Sequi architecto ab nulla distinctio quam unde et enim suscipit, nemo, id, aspernatur aperiam officiis iure incidunt consectetur corporis? Incidunt?</p>
+        </div>
+    </div>
+    <p>ctrl+g -> 행이 많을 때 번호로 검색해 이동하는 방법/ 검색 단축키 </p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.popup{
+    position: fixed;
+    left: 100px;
+    top: 50px;
+    width: 300px;
+    padding: 10px;
+    background-color: wheat;
+    border: 1px solid saddlebrown;
+    display: none;
+}
+.popup.on{display: block;}
+/* 위에 none을 해제하는 기능 */
+.popup_control{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn_close{
+    padding: 5px;
+    background-color: saddlebrown;
+    color: #fff;
+    cursor: pointer;
+}

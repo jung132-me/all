@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min/max</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>너비와 높이의 최소값 최대값 설정하기</h1>
+    <p>전제: 너비와 높이가 고정 값이 아닌 변동 값일 때 사용하는 속성</p>
+    <ul>
+        <li>min-width : 최소 너비 설정</li>
+        <li>max-width : 최대 너비 설정</li>
+        <li>min-height: 최소 높이 설정</li>
+        <li>max-height: 최대 높이 설정</li>
+    </ul>
+    <hr>
+    <h2>단위</h2>
+    <ul>
+        <li> px : 화면 입자에 대한 기본단위(절대단위)</li>
+        <li> % : 부모태그 혹은 기준태그에 대한 상대단위</li>
+        <li> vw(viewport-width) :브라우저 화면 너비에 대한 상대단위</li>
+        <li> vh(viewport-height) :브라우저 화면 높이에 대한 상대단위</li>
+    </ul>
+    <hr>
+    <div class="box a">
+        이 태그는 너비가 50%로 설정되어 있기 때문에 부모태그 너비의 반만큼 계산이 되고 있다. 현재 부모태그는 너비를 지정하지 않았기 때문에 화면너비에 비례하는 width:auto값이 적용되어 있다. 그래서 태그의 너비는 변동 너비가 적용 되어 있는 상황이다. 이러한 상태에서 max-width:800px이 의미하는 것은 최대 너비를 800px로 제한하겠다는 뜻이다. 그리고 min-width:320px은 최소너비를 320px로 두어 더 작게 설정되지 않게끔 정한 것이다. min-height:는 300px이므로 컨텐츠가 없어도 최소 300px의 높이를 유지한다. 그리고 컨텐츠의 양에 따라 자동으로 높이가 늘어나는 height속성은 바꾼 적이 없으므로 여전히 auto값이 설정되어 있는 상황이다. 이런 상황이기 때문에 컨텐츠가 많아지게 되면 그에 맞추어 높이가 늘어나게 되어있다. 그러나 max-height를 400px로 설정하였기 대문에 최대 높이는 400px로 제한된다. 그리고 최대 높이의 컨텐츠 박스가 설정되었을 때 그 이상의 흘러넘치는 내용에 대해서느 스크롤바가 자동으로 활성화 되도록 설정해 놓은 상태이다.
+    </div>
+
+</body>
+</html>

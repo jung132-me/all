@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hana hospital reservation</title>
+</head>
+<body>
+    <div class="user_reservation">
+        <h2><em>STEP5.</em><br>예약자정보를 입력해주세요</h2>
+        <form action="#">
+            <div>
+                <label for="user_name">예약자 성명</label>
+                <input type="text" id="user_name" placeholder="이름">
+            </div>
+            <div>
+                <label for="user_birth">생년월일</label>
+                <input type="number" id="user_birth" maxlength="8" placeholder="8자리 숫자만 입력해주세요">
+            </div>
+            <div>
+                <label for="user_contact">예약자 연락처</label>
+                <input type="number" id="user_contact" placeholder="예시) 010-1111-1111">
+            </div>
+            <div>
+                <span>내원기록</span>
+                <label for="first_visit">초진</label>
+                <input type="radio" id="first_visit" name="user_visit_history">
+                <label for="several_visit">재진</label>
+                <input type="radio" id="several_visit" name="user_visit_history">
+            </div>
+            <div>
+                <label for="reservation_detail">예약내용</label>
+                <textarea id="reservation_detail" placeholder="부위 및 증상을 남겨주세요. 예약내용을 남겨주시면 연락처로 상담전화를 드립니다."></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="user_agree">
+                <label for="user_agree">개인정보수집동의</label>
+            </div>
+            <button type="submit">온라인예약 신청하기</button>
+            <button type="reset">취소</button> 
+        </form>
+    </div>
+</body>
+</html>

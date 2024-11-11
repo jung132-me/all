@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항연산자 - ternary operator</title>
+</head>
+<body>
+    <h1>삼항연산자</h1>
+    <p>조건? 조건이 참일 때 남겨지는 값 : 조건이 거짓일 때 남겨지는 값</p>
+    <script>
+       let result1 = 5>3?"a":"b"
+       console.log(result1)
+       // 물음표 앞 조건이 참일 때 a 추출, 거짓일 때 b 추출
+       let result2 = ""?"배고픔":"배부름"
+       console.log(result2)
+        // "" 조건 안에 내용이 비어 있기 때문에 값은 False로 "배부름"이 추출됨
+        // let result2 = !""?"배고픔":"배부름"
+        // "" 조건 안에 내용이 비어 있기 때문에 값은 False이지만, 조건 앞에 !(부정)이 있기 때문에 true로 추출됨
+        let result3 = 3-3?100:50
+        console.log(result3)
+        let score = 80
+        console.log(score>90?"A":score>80?"B":score>70?"C":"D")
+        // 왼쪽부터 순차적으로 계산해나감
+    </script>
+</body>
+</html>

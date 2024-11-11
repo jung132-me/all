@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>참거짓데이터 - boolean</title>
+</head>
+<body>
+    <h1>boolean 데이터</h1>
+    <p>값이 두개 밖에 없다. true/false</p>
+
+    <h2>비교를 통하여 참거짓이 계산된다.</h2>
+    <p>크다, 작다, 같다, 같지않다 와 같은 비교를 통하여 참거짓이 계산된다.</p>
+    <p>!는 자바스크립트에서 부정의 의미(not)으로 사용된다.</p>
+    <script>
+        "Asdf"
+        123
+        true
+        false
+        console.log(10>7)
+        console.log(10>=10)
+        console.log(9<=8)
+        console.log(10==10) //데이터 형태까지는 아니지만 대략적으로 비슷하다
+        console.log(10===10) //데이터 형태까지 완벽히 같다
+        console.log(10=="10")
+        // 예를 들어 위의 경우엔 왼쪽에 숫자데이터, 오른쪽에는 문자데이터임. "=="는 데이터 형태는 보지 않기 때문에 true로 추출되지만, "==="를 쓰면 데이터 형태까지 검사하기 때문에 false로 추출됨
+        console.log(10!=10) // 데이터 형태까지는 아니지만 대충 같지 않다
+        console.log(10!==10) //데이터 형태까지 비교했을 때 같지 않다
+        console.log(!(10>2)) //10은 2보다 크지 않다를 부정 > 10이 2보다 크다는 것은 거짓이다 > false로 추출됨
+        console.log(!(!(10>2))) //10이 2보다 크지 않다는 것은 거짓이다 > true로 추출                    
+</script>
+
+    <h1>있으면 true 없으면 false</h1>
+    <h3>false로 간주되는 경우</h3>
+    <ul>
+        <li>숫자데이터인데 값이 0인 경우</li>
+        <li>문자데이터인데 내용이 없는 빈문자인 경우</li>
+        <li>변수를 선언했는데 변수 안에 아무 값도 저장되지 않은 경우</li>
+        <li>undefined 값은 false로 간주한다.</li>
+        <li>null 값은 false로 간주한다.</li>
+    </ul>
+    <script>
+        console.log(123) //수가 있으므로 true로 간주된다.
+        console.log(-10) //수가 있으므로 true로 간주된다.
+        console.log(0) //수가 없으므로 false로 간주된다.
+        console.log("") //문자데이터형태를 띄었지만, 문자 내용이 없으므로 false로 간주된다.
+        let a
+        console.log(a) // 변수로 설정하고, 아무 값도 넣지 않았으므로 false로 간주한다.
+        undefined // undefined 데이터 값은 기본으로 false로 간주된다.
+        let b = null //null은 아무 내용을 넣지 않겠다는 설정
+        // let result = prompt("나이를 입력해주세요")
+        // console.log(result)
+        !"" // true(x) / true로 간주된다(정답)
+        !0 // true(x) / true로 간주된다(정답)
+        let c
+        !c // true로 간주된다 (c라는 변수에 값이 없다면)
+        !undefined // true로 간주된다
+        !null // true로 간주된다
+    </script>
+</body>
+</html>

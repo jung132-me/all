@@ -1,0 +1,219 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: inherit; color:inherit}
+img{max-width: 100%;}
+
+html{
+    background-color: #fff;
+    color: #333;
+}
+
+header{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.gnb{
+    display: flex; 
+    margin-top: 50px; 
+    margin-right: 25px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+}
+.gnb:hover{
+    height: 160px;
+}
+.gnb:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 150px;
+    background-color: orange;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none; 
+    /* gnb외의 영역에 호버 시 걸리지 않게 하기 위함 */
+    transition: all 0.5s ease 0s;
+}
+.gnb:hover:after{
+    opacity: 1;
+    pointer-events: auto;
+}
+.gnb>li>a{
+    display: flex;
+    width: 180px;
+    height: 50px;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.gnb>li>ul>li>a{
+    width: 180px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.gnb li:hover>a{
+    background-color: black;
+    color: #fff;
+}
+.gnb ul{
+    left: 0;
+    top: 50px;
+    height: 0;
+    transition: all 0.5s ease 0s;
+}
+.station{
+    /* border: 1px solid salmon; */
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+.train{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* 기준영역 */
+}
+.train>li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    /* 투명하게 하는 설정은 마우스 이벤트가 논으로 들어가는 설정이 공식처럼 들어감 */
+    transition: all 0.5s ease 0s;
+}
+.train>li.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+.train>li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contents{
+    display: flex;
+    height: 200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.contents>section{
+    flex: 1;
+    padding: 10px;
+}
+.contents h2{
+   margin: 10px 0;
+}
+.notice li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.notice li a{
+    /* width: 60%;
+    white-space: no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* 오버플로우된 글 ...으로 하는 설정 */
+    border: 1px solid #fff;
+    /* 위의 설명을 위해 해둔 설정이므로 신경쓰지 말것 */
+}
+.gallery{
+    display: flex;
+    justify-content: space-between;
+}
+.gallery img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    /* 사진 사이즈가 조금 클때 수정하는 방법 */
+}
+.gallery img:hover{
+    opacity: 0.8;
+}
+.direct{
+    background: url("../img/direct.jpg") no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.direct a{
+    background-color: rgba(255, 166, 0, 0.815);
+    color: black;
+    padding: 10px 30px;
+}
+footer{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info{
+    width: 1000px;
+    flex-grow: 1;
+    /* 1대1 비율로 설정할 때는 space between으로 설정한 두 값 모두 flex-grow를 1로 입력시 적용이 됨. 그러나 space between을 적용한 두 값 중 위의 처럼 하나만 입력시 그것이 빈 여백을 전부 차지하게 된다는 속성임. !!참고하여 사용할 것!! */
+}
+.foot_menu{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.copy{
+    text-align: center;
+}
+.foot_menu>li{
+    margin-right: 20px;
+    text-decoration: underline;
+}
+footer form{
+    margin-right: 20px;
+}
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid black;
+    display: none;
+}
+.popup h2{
+    margin-bottom: 10px;
+}
+.popup_ctl{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn_close{
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 5px 15px;
+}
+.popup.on{
+    display: block;
+}

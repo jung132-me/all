@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>박스모델</h1>
+    <p>태그의 자세한 구조를 알아보자.(태그가 어떻게 생겼는가)</p>
+
+    <h2>박스모델의 4요소</h2>
+    <ul>
+        <li>컨텐츠박스 - 자식태그와 자식텍스트들이 들어가는 공간</li>
+        <li>테두리 - border</li>
+        <li>테두리 안쪽 여백 - padding</li>
+        <li>테두리 바깥 여백 - margin</li>
+    </ul>
+
+    <hr>
+
+    <h3>border</h3>
+    <p>태그의 가장자리에 그릴 수 잇는 경계선이다.</p>
+    <p>태그가 위에서부터 거꾸로 쌓일 때 경계선을 기준으로 쌓이게 된다.</p>
+
+    <h3>margin</h3>
+    <p>margin은 테두리 기준 바깥쪽 여백이다.</p>
+    <p>만들어진 바깥쪽 여백만큼 인접해있는 형제태그를 밀어낸다.</p>
+    <p>밀어내지 못하는 상황이라면 선택된 본인이 밀린다.</p>
+    <p>인라인레벨 태그는 위라애 margin을 적용하지 않는다.</p>
+    <p>인접한 태그의 margin값은 중첩되지 않는다. 두 개의 margin중 큰 값으로 적용된다.</p>
+
+    <h3>padding</h3>
+    <p>padding은 테두리 기준 안쪽 여백이다.</p>
+    <p>만들어진 안쪽 여백만큼 테두리에서부터 컨텐츠박스를 밀어낸다.</p>
+
+    <h3>content-box</h3>
+    <p>글자나 이미지 영상 등의 컨텐츠 또는 자식태그가 놓여지는 공간이다.</p>
+    <p>컨텐츠박스의 너비와 높이의 기본값은 auto이다.</p>
+    <p>width의 기본값은 auto/height의 기본값은 auto이다. width의 기본값이 auto라는 것은 html태그에 적용된 auto값을 상속받은 것으로, html태그의 너비의 auto값은 사용자가 브라우저의 크기를 줄일 대 자동으로 크기를 맞춘다는 의미로 해석된다. 그리고 height의 기본값이 auto라는 것은 컨텐츠 박스안에 포함된 내용의 양에 맞추어 자동으로 높이가 증가하거나 감소한다는 의미로 해석한다.</p>
+    <p>box-sizing:content-box이 기본값이며, 이때 설정하는 width/height는 컨텐츠 박스의 크기를 변화시킨다.</p>
+    <p>box-sizing:border-box로 설정을 바꾸면 태그가 갖는 테두리 굵기와 패딩까지 포함해서 설정한 너비(width)와 높이로 태그의 크기가 조절된다.</p>
+
+
+    <div class="box">
+        내용
+    </div>
+    <div class="box2">
+        <p>p태그</p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio veritatis nulla tempora facere asperiores sapiente corporis iste mollitia! Adipisci voluptate ea modi! Repudiandae, ducimus. Facere sequi omnis iusto sit consectetur?</div>
+    <!-- <span class="line1">
+        스팬태그 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi dolorum quas? Laborum soluta omnis magnam necessitatibus non, cupiditate enim dolores sequi repellendus dicta hic? Quam sapiente accusantium nam repudiandae.
+    </span> -->
+    <div id="container">
+        컨테이너내용 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, a. Quibusdam vitae, ex natus nam, dolor maxime aperiam recusandae velit delectus asperiores totam, ipsam similique animi vero mollitia excepturi repellat.
+    </div>
+    <div class="box3">
+        두번째컨텐츠내용 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse corrupti, mollitia, facilis temporibus doloremque impedit illo dicta voluptates, perferendis quod pariatur possimus reprehenderit deserunt sequi laudantium excepturi? Deserunt, omnis aut.
+    </div>
+</body>
+</html>

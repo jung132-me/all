@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수/상수</title>
+</head>
+<body>
+    <h1>변수</h1>
+    <p>변할 가능성이 있는 수</p>
+    <p>데이터가 저장되는 기억공간</p>
+    <ol>
+        <li>변수를 생성(선언)한다.</li>
+        <li>생성된 변수에 값을 대입(변수에 최초로 값을 대입하는 것을 특별히 초기화하는 과정이라고 말한다.)</li>
+    </ol>
+    <p>변수를 최초로 만들 때 let이라는 키워드를 쓴다.</p>
+    <p>변수는 변수를 불러와서 새로운 값을 대입하면 기존에 저장되어있던 값은 사라진다.</p>
+    <p>변수는 똑같은 이름을 만들 수 없다.</p>
+    <p>변수이름은 영소문자로 한다. 숫자만 쓰거나 숫자로 시작하면 안됨(영문 쓰고 뒤에 숫자 쓰는 것은 가능).특수문자 불가(언더바는 됨)</p>
+
+    <script>
+        let name="김정민"        
+        let age=29
+        name = "이름"
+        // 최초로 등록한 이름 밑에 다른 이름을 적게 되면, 자바스크립트는 위에서 아래로 해석하기 때문에 위에 적힌 이름부터 나타남.
+        // alert(name+"님 안녕하세요!")
+        // alert(name+"님은 "+age+"살입니다.")
+
+        let user_name = prompt("당신의 이름을 입력해주세요.")
+        document.write(" <h3>"+user_name+"님 반갑습니다.</h3>")
+        let user_age = Number(prompt(user_name+"님의 나이를 입력해주세요."))
+        document.write("<p>"+user_name+"님의 나이는 "+user_age+"살이군요. 10년 뒤에는 그럼 "+(user_age+10)+"살이 되시겠네요.</p>")
+        
+        
+            
+    </script>
+
+   
+    <h1>상수</h1>
+    <p>변하지 않는 수</p>
+    <p>예/ 성별이 남자라면 성별이라는 것이 변수, 해당되는 남자라는 것이 상수</p>
+</body>
+</html>

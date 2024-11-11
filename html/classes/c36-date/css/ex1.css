@@ -1,0 +1,28 @@
+*{margin: 0;padding: 0;}
+html{
+    font-family: "Lobster Two", sans-serif;
+}
+.clock{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock.day{
+    background: url("../img/day.jpg") no-repeat 50% 50% /cover;
+}
+.clock.night{
+    background: url(../img/night.jpg) no-repeat 50% 50% / cover;
+}
+#time{
+    color: lightgoldenrodyellow;
+    text-shadow: 0 10px 10px wheat;
+    width: 50%;
+}
+.day{
+    font-size: 5rem;
+
+}
+.time{
+    font-size: 15rem;
+}

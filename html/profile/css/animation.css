@@ -1,0 +1,24 @@
+@keyframes slideMoveHorizontal{
+    0%{
+        transform: translateX(0%);
+    }
+    16.666%{
+        transform:translateX(-16.666%)
+    }
+    33.333%{
+        transform:translateX(-33.333%)
+    }
+    49.999%{
+        transform:translateX(-49.999%)
+    }
+    66.665%{
+        transform:translateX(-66.666%)
+    }
+    83.331%{
+        transform:translateX(-83.333%)
+    }
+    100%{
+        transform: translateX(0%);
+        /* (100/(갯수))*(갯수-1) */
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터형태 객체(사물) - object</title>
+</head>
+<body>
+    <h1>객체 - object</h1>
+    <p>자바스크립트에서 사물을 나타낼 때 사용하는 표현</p>
+    <p>객체는 ,(콤마)를 사용하여 프로퍼티를 입력할 수 있다.</p>
+    <p>그리고 각각의 프로퍼티는 :(콜론)을 사용하여 key:value형태로 구성되어 있다.</p>
+    <p>여기서 key값을 사용하여 저장된 value값을 가져올 수 있다. key값은 객체안에 속해있는 변수처럼 활용한다.</p>
+    <script>
+        let person1 =  ["정현진",44,"남자"]
+        person1[0]
+        let person2 = {
+            name:"정현진",
+            age:"44",
+            gender:"남자",
+            hobbies:["어항관리","고양이관리"],
+            score: {ko:90,en:100,math:99}
+        }
+        person2.score.ko
+        person2.score.en
+        person2.score.math
+        person2["name"] // 표현방식1
+        person2.name //표현방식2
+        person2["age"]
+        person2.age
+        person2["gender"]
+        person2.gender
+        person2["hobbies"][0]
+        person2.hobbies[0]
+
+        let classmates = [
+            
+            ["정현진","남자",44,false,["어항관리","고양이관리","달리기"]],
+            ["이지은","여자",27,true,["요리","영화","쇼핑"]],
+            ["김리희","여자",27,false,["캠핑","여행"]],
+            ["이미연","여자",25,false,["연극보기","운동"]],
+            ["고이준","여자",23,false,["노래듣기","산책","여행","요리하기"]],       
+            ["김정민","여자",29,false,["뮤지컬보기","맛집탐방하기","전시회보기"]],
+            ["송지혜","여자",26,false,["노래듣기","여행","운동","드라마보기","드라이브"]],    
+            ["박소연","여자",29,false,["요리하기","영화보기","운동"]],    
+            ["서유담","여자",26,false,["산책하기","영상보기","인터넷쇼핑"]],  
+            ["문진아","여자",32,false,["영화보기","카페가기","서점구경하기","유튜브보기"]],   
+            ["안태리","여자",26,false,["유튜브보기","잠자기","여행가기","드라마보기"]],   
+            ["정동익","남자",37,false,["산책하기","게임하기","유튜브보기","맛집탐방","여행하기"]]   
+        ]
+
+        let classmatesObjectArray = [
+            {
+                name:"정현진",
+                gender:"남자" ,
+                age: 44,
+                married:false,
+                hobbies:["어항관리","고양이관리","달리기"]
+            },
+            {
+                name:"이지은",
+                gender:"여자",
+                age: 27,
+                married: true,
+                hobbies:["요리","영화","쇼핑"]
+            },
+            {
+                name:"김리희",
+                gender:"여자" ,
+                age: 27,
+                married:false,
+                hobbies:["캠핑","여행"]
+            },
+            {
+                name:"이미연",
+                gender:"여자",
+                age: 25,
+                married:false,
+                hobbies:["연극보기","운동"]
+            },
+            {
+                name:"고이준",
+                gender:"여자",
+                age: 23,
+                married:false,
+                hobbies:["노래듣기","산책","여행","요리하기"]
+            },
+            {
+                name:"김정민",
+                gender:"여자",
+                age: 29,
+                married:false,
+                hobbies:["뮤지컬보기","맛집탐방하기","전시회보기"]
+            },
+            {
+                name:"송지혜",
+                gender:"여자", 
+                age: 26, 
+                married:false,
+                hobbies:["노래듣기","여행","운동","드라마보기","드라이브"]
+            },
+            {
+                name:"박소연",
+                gender:"여자", 
+                age: 29,
+                married:false,
+                hobbies:["요리하기","영화보기","운동"]
+            },
+            {
+                name:"서유담",
+                gender:"여자", 
+                age: 26,
+                married:false,
+                hobbies:["산책하기","영상보기","인터넷쇼핑"]
+            },
+            {
+                name:"문진아",
+                gender:"여자" ,
+                age: 32,
+                married:false,
+                hobbies:["영화보기","카페가기","서점구경하기","유튜브보기"]
+            },
+            {
+                name:"안태리",
+                gender:"여자" ,
+                age: 26,
+                married:false,
+                hobbies:["유튜브보기","잠자기","여행가기","드라마보기"]
+            },
+            {
+                name:"정동익",
+                gender:"남자" ,
+                age: 37,
+                married:false,
+                hobbies:["산책하기","게임하기","유튜브보기","맛집탐방","여행하기"]
+            }
+
+        ]
+    </script>
+    <!-- <ul class="classmate">
+        <li>정현진</li>
+        <li>이지은</li>
+        <li>김리희</li>
+        <li>이미연</li>
+        <li>고이준</li>
+        <li>김정민</li>
+        <li>송지혜</li>
+        <li>박소연</li>
+        <li>서유담</li>
+        <li>문진아</li>
+        <li>안태리</li>
+        <li>정동익</li>
+    </ul> -->
+    <script>
+        document.write(`
+        <ul class="classmate">
+            <li>${classmatesObjectArray[0].name}</li>
+            <li>${classmatesObjectArray[1].name}</li>
+            <li>${classmatesObjectArray[2].name}</li>
+            <li>${classmatesObjectArray[3].name}</li>
+            <li>${classmatesObjectArray[4].name}</li>
+            <li>${classmatesObjectArray[5].name}</li>
+            <li>${classmatesObjectArray[6].name}</li>
+            <li>${classmatesObjectArray[7].name}</li>
+            <li>${classmatesObjectArray[8].name}</li>
+            <li>${classmatesObjectArray[9].name}</li>
+            <li>${classmatesObjectArray[10].name}</li>
+            <li>${classmatesObjectArray[11].name}</li>
+        </ul>`)
+        document.write("<ul class='classmate'>")
+        for(let i=0; i<=11 ;i++){
+            let hobbies = ""    
+            for(let j=0; j<classmatesObjectArray[i].hobbies.length; j++){
+                hobbies = hobbies + "<li>"+classmatesObjectArray[i].hobbies[j]+"</li>"
+            }
+            document.write(`
+            <li>
+                <h2>${classmatesObjectArray[i].name}</h2>
+                <p>성별: ${classmatesObjectArray[i].gender}</p>
+                <p>연령: ${classmatesObjectArray[i].age}</p>
+                <p>결혼여부:${classmatesObjectArray[i].married?"기혼":"미혼"}</p>
+                <h3>취미</h3>
+                <ul>
+                    ${hobbies}
+                </ul>  
+            </li>
+            `)
+        }
+        document.write("</ul>")
+    </script>
+
+
+</body>
+</html>

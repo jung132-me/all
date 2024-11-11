@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display - 태그의 종류 </title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>태그의 종류</h1>
+    <p>태그는 크게 3가지 종류로 나뉜다.</p>
+    <ul>
+        <li>블록태그</li>
+        <li>인라인태그</li>
+        <li>인라인블록태그</li>
+    </ul>
+    <hr>
+    <h2>블록레벨태그</h2>
+    <p>대상 - 강조태그와 링크태그 등과 같이 사용했을 때 줄바꿈이 되지 않는 태그를 제외한 거의 모든 태그들 - 95%이상</p>
+    <ul>
+        <li>태그가 포함하는 글자 개수에 관계없이 한 폭의 너비를 다 차지한다. -> 자동으로 줄바꿈 처리가 된다.</li>
+        <li>가로세로 너비를 지정할 수 있다.(직사각형(박스형태)이기 때문에 그러함)</li>
+        <li>이런 블록레벨태그들은 css속성 display:block;으로 설정된 태그들이다.</li>
+    </ul>
+
+    <hr>
+
+    <h2>인라인레벨태그</h2>
+    <p>대상 - 강조태그오아 링크태그등과 같이 사용했을 때 줄바꿈이 되지 않는 태그들.</p>
+    <ul>
+        <li>태그가 포함하는 글자 개수에 맞추어 너비가 설정된다. -> 자동으로 줄바꿈 처리가 되지 않는다.</li>
+        <li>인라인레벨태그들은 직사각형 형태가 아니기 때문에 가로세로 사이즐르 지정해도 적용되지 않는다. 인라인 레벨태그들의 글자들은 인간이 필기하는 것처럼 baseline을 맞추어 배열되기 때문에 가로세로 사이즈를 지정하기 어렵다.</li>
+        <li>이런 인라인레벨태그들은 display:inline;으로 설정되어있는 태그들이다.</li>
+    </ul>
+
+    <hr>
+
+    <h2>인라인블록레벨태그 - 특징 </h2>
+    <p>대상 - 사용했을 때 줄바꿈이 되지않고, 추가적으로 가로세로사이즈를 지정할 수 있는 태그들</p>
+    <ul>
+        <li>인라인레벨 태그처럼 태그가 포함하는 글자 개수에 맞추어 너비가 설정되고, 블록레벨태그처럼 가로와 세로사이즈를 지정할 수 있는 형태의 태그들</li>   
+        <li>display:inline-block;으로 설정된 태그들</li>
+        <li>img, video, button</li>
+        <button>버튼</button>
+    </ul>
+
+    <!-- 하단은 예시 -->
+
+    <p class="a">p태그</p>
+    <ul class="b">
+        <li>리스트태그</li>
+    </ul>
+    <strong class="c">스트롱태그</strong>
+    <p class="a">p태그</p>
+    <strong class="c">스트롱태그</strong>
+    <div class="d">div태그</div>
+</body>
+</html>

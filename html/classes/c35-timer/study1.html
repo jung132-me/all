@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer함수</title>
+</head>
+<body>
+    <h1>타이머함수</h1>
+    <hr>
+
+    <h2>setTimeout()</h2>
+    <p>일정시간 뒤에 특정한 동작을 한번 실행하는 함수</p>
+
+  
+    <h2>clearTimeout()</h2>
+    <p>setTimeout함수가 남긴 타이머를 인자로 사용하여 예약을 취소하는 함수</p>
+    <button id="btn_cancel">3초 후 알림창이 나타납니다...취소</button>
+   
+    
+    <h2>setInterval()</h2>
+    <p>일정시간마다 특정한 동작을 반복하는 함수</p>
+    
+    
+    <h2>clearInterval()</h2>
+    <p>setInterval()함수가 남기고 간 예약을 취소하는 함수</p>
+    
+
+    <script>
+        let timer = setTimeout(function(){
+            alert("test")
+        },4000)   
+
+        let btn_cancel = document.querySelector("#btn_cancel")
+        btn_cancel.addEventListener("click",function(){
+            clearTimeout(timer)
+            clearInterval(timer2)
+            btn_cancel.innerHTML="취소되었습니다."
+        })
+
+        let second = 3 
+        let timer2 = setInterval(function(){
+            second--
+            btn_cancel.innerHTML = `${second}초 후 알림창이 나타납니다...취소`
+            if(second==0){
+                clearInterval(timer2)
+            }
+            
+        },1000)
+
+    </script>
+</body>
+</html>

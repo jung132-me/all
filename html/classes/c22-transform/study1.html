@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <link rel="stylesheet" href="./css/study1.css">
+</head>
+<body>
+    <h1>변형 - transform</h1>
+    <p>transform이라는 css속성은 보통 애니메이션효과를 만들 때 사용한다.</p>
+    <p>기본적으로 너비나 높이의 기준이 명확한 박스형태의 태그에만 사용가능하다.</p>
+    <div class="box a">
+        translateX 가로축으로 이동 단위는 픽셀, % 등 여러단위로 사용할 수 있고, %단위를 썼을 때 부모태그 기준이 아닌 선택한 태그의 너비에 비례하는 값만큼 이동
+    </div>
+    <div class="box b">
+        translate y축 세로축으로 이동 %단위를 썼을 때 부모태그 기준이 아닌 선택한 태그의 높이에 비례하는 값만큼 이동
+    </div>
+    <div class="parent">
+        <div class="box c">
+            translateZ는 z축 입체축을 따라서 앞뒤로 이동시키는 속성. 
+            앞으로 이동은 + / 뒤로 이동은 - 방향으로 이동시킬 수 있다. 그리고 이렇게 하기 위해서느 부모태그에 perspective속성을 지정하여 원근감을 만들어 주어야 입체이동이 표현가능하다.
+        </div>
+    </div>
+    <div class="box d">
+       평면회전, 각도단위 deg단위를 사용하여 회전시킬 수 있다. 이 때, 변형의 기준도 변경할 수 있다.  
+    </div>
+    <div class="parent"> 
+        <div class="box e">
+            y축회전 
+        </div>
+        <div class="box f">
+            x축회전 
+        </div>
+    </div>
+    <div class="box g">
+        x축 스케일
+    </div>
+    <div class="box h">
+        y축 스케일
+    </div>
+    <div class="box i">
+        x,y축 스케일
+    </div>
+</body>
+</html>
